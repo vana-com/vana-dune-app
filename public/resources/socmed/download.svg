@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_20302" data-name="Rectangle 20302" width="24" height="24" transform="translate(-1638 -20464)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="ico_-_download_-_default" data-name="ico - download - default" transform="translate(1638 20464)" clip-path="url(#clip-path)">
+    <g id="Interface_Download" data-name="Interface / Download" transform="translate(-1638 -20464)">
+      <path id="Vector" d="M6,21H18M12,3V17m0,0,5-5m-5,5L7,12" fill="none" stroke="#2a2a2a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

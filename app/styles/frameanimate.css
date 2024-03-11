@@ -1,0 +1,168 @@
+:root {
+    --animation-duration: 0.5s,
+}
+
+.animate-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.card_container {
+    position: relative;
+}
+
+.card {
+    transition: all ease 0.35s;
+    position: absolute;
+    font-size: 24px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    background-color: rgba(248, 228, 217, 0.3);
+    backdrop-filter: blur(3px);
+}
+
+.small {
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 5;
+    --y: calc(0% + 33px);
+    transform: translate(0%, var(--y)) scale(0.92);
+    box-shadow: 0px 7px 6px rgba(0, 0, 0, 0.16);
+}
+
+.small~.small {
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    --y: calc(0% + 69px);
+    transform: translate(0%, var(--y)) scale(0.83);
+    box-shadow: 0px 7px 6px rgba(0, 0, 0, 0.03);
+}
+
+.default {
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    box-shadow: 0px 7px 6px rgba(0, 0, 0, 0.16);
+    background-color: #EDD6CF;
+}
+
+.large-card {
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+
+    animation-name: bgOpacityHidden;
+    animation-duration: 0.75s;
+    box-shadow: 0px 7px 6px rgba(0, 0, 0, 0.16);
+    background-color: #EDD6CF;
+    overflow: hidden;
+}
+
+
+
+@keyframes bgOpacityHidden {
+    7% {
+        --y: calc(0% + 69px);
+        transform: translate(0%, var(--y)) scale(0.83);
+    }
+
+    25% {}
+
+    50% {}
+
+    75% {}
+
+    100% {}
+}
+
+@keyframes bgOpacityShow {
+    100% {}
+
+    70% {}
+
+    50% {}
+
+    0% {}
+}
+
+.large-card::after {
+    content: "";
+    height: 0%;
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 12px;
+    background-color: rgba(249, 241, 236, 0.5);
+
+    animation-name: heightAnimation;
+    animation-duration: 0.35s;
+    opacity: 0.7;
+}
+
+@keyframes heightAnimation {
+
+    100% {
+        height: 0%;
+    }
+
+    90% {
+        height: 40%;
+    }
+
+    75% {
+        height: 60%;
+    }
+
+    45% {
+        height: 70%;
+
+    }
+
+    7% {
+        height: 80%;
+        width: 100%;
+    }
+}
+
+.next-question {
+    display: block;
+    filter: blur(0.05px);
+    -webkit-filter: blur(0.05px);
+
+    animation-name: textOpacityShow;
+    animation-duration: 0.05s;
+    opacity: 0.4;
+}
+
+@keyframes textOpacityShow {
+    100% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    0% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,348 @@
+:root {
+    --sprite-layer-1: 129px;
+    --sprite-layer-2: 129px;
+    --sprite-layer-3: 225px;
+    --sprite-layer-4: 440px;
+
+    --multiplier-1: 1.25;
+    --multiplier-2: 1.30;
+    /* --multiplier-3: 1.40; */
+    --multiplier-3: 1.25;
+}
+
+.sprite-layer-1,
+.sprite-layer-2,
+.sprite-layer-3,
+.sprite-layer-4 {
+    background-position: center center;
+}
+
+.sprite-layer-4 {
+    background-size: 100% 100%;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 382px) {
+    .sprite-layer-1 {
+        height: 134px;
+    }
+
+    .sprite-layer-2 {
+        height: 134px;
+    }
+
+    .sprite-layer-2 {
+        height: 134px;
+    }
+}
+
+@media only screen and (min-width: 420px) {
+    .sprite-fog {
+        background-size: 100% 100%;
+
+    }
+}
+
+@media only screen and (min-width: 420px) {
+    .sprite-fog {
+        background-size: 100% 100%;
+    }
+}
+
+@media only screen and (min-width: 585px) {
+    .sprite-layer-1 {
+        height: calc(109px * var(--multiplier-1));
+    }
+
+    .sprite-layer-2 {
+        height: calc(198px * var(--multiplier-1));
+        bottom: calc(62px * var(--multiplier-1));
+    }
+
+
+    .sprite-layer-3 {
+        height: calc(310px * var(--multiplier-1));
+        bottom: calc(181px * var(--multiplier-1));
+    }
+
+    .sprite-layer-4 {
+        height: calc(440px * var(--multiplier-1));
+        bottom: calc(280px * var(--multiplier-1));
+        background-size: 100% 100%;
+    }
+
+    .sprite-footprint {
+        height: calc(26px * var(--multiplier-1));
+        width: calc(26px * var(--multiplier-1));
+        bottom: calc(300px * var(--multiplier-1));
+        right: calc(180px * var(--multiplier-1));
+    }
+
+    .sprite-character {
+        height: calc(37px * var(--multiplier-1));
+        width: calc(37px * var(--multiplier-1));
+        bottom: calc(330px * var(--multiplier-1));
+        right: calc(160px * var(--multiplier-1));
+    }
+
+    .sprite-moon {
+        height: calc(92px * var(--multiplier-1));
+        width: calc(92px * var(--multiplier-1));
+        bottom: calc(442px * var(--multiplier-1));
+        right: calc(64px * var(--multiplier-1));
+    }
+
+    .sprite-left-stars {
+        height: calc(131px * var(--multiplier-1));
+        width: calc(100px * var(--multiplier-1));
+        bottom: calc(511px * var(--multiplier-1));
+        left: calc(18px * var(--multiplier-1));
+    }
+
+    .sprite-right-stars {
+        height: calc(131px * var(--multiplier-1));
+        width: calc(150px * var(--multiplier-1));
+        top: calc(56px * var(--multiplier-1));
+        right: calc(21px * var(--multiplier-1));
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .sprite-layer-1 {
+        height: calc(109px * var(--multiplier-1));
+    }
+
+    .sprite-layer-2 {
+        height: calc(198px * var(--multiplier-1));
+        bottom: calc(62px * var(--multiplier-1));
+    }
+
+
+    .sprite-layer-3 {
+        height: calc(310px * var(--multiplier-1));
+        bottom: calc(181px * var(--multiplier-1));
+    }
+
+    .sprite-layer-4 {
+        height: calc(440px * var(--multiplier-1));
+        bottom: calc(280px * var(--multiplier-1));
+        background-size: 100% 100%;
+    }
+
+    .sprite-footprint {
+        height: calc(26px * var(--multiplier-1));
+        width: calc(26px * var(--multiplier-1));
+        bottom: calc(300px * var(--multiplier-1));
+        right: calc(180px * var(--multiplier-1));
+    }
+
+    .sprite-character {
+        height: calc(37px * var(--multiplier-1));
+        width: calc(37px * var(--multiplier-1));
+        bottom: calc(330px * var(--multiplier-1));
+        right: calc(160px * var(--multiplier-1));
+    }
+
+    .sprite-moon {
+        height: calc(92px * var(--multiplier-1));
+        width: calc(92px * var(--multiplier-1));
+        bottom: calc(442px * var(--multiplier-1));
+        right: calc(64px * var(--multiplier-1));
+    }
+
+    .sprite-left-stars {
+        height: calc(131px * var(--multiplier-1));
+        width: calc(100px * var(--multiplier-1));
+        bottom: calc(511px * var(--multiplier-1));
+        left: calc(18px * var(--multiplier-1));
+    }
+
+    .sprite-right-stars {
+        height: calc(131px * var(--multiplier-1));
+        width: calc(150px * var(--multiplier-1));
+        top: calc(56px * var(--multiplier-1));
+        right: calc(21px * var(--multiplier-1));
+    }
+}
+
+@media only screen and (min-width: 1010px) {
+    .sprite-layer-1 {
+        height: calc(109px * var(--multiplier-2));
+    }
+
+    .sprite-layer-2 {
+        height: calc(198px * var(--multiplier-2));
+        bottom: calc(62px * var(--multiplier-2));
+    }
+
+
+    .sprite-layer-3 {
+        height: calc(310px * var(--multiplier-2));
+        bottom: calc(181px * var(--multiplier-2));
+    }
+
+    .sprite-layer-4 {
+        height: calc(440px * var(--multiplier-2));
+        bottom: calc(280px * var(--multiplier-2));
+        background-size: 100% 100%;
+    }
+
+    .sprite-footprint {
+        height: calc(26px * var(--multiplier-2));
+        width: calc(26px * var(--multiplier-2));
+        bottom: calc(300px * var(--multiplier-2));
+        right: calc(180px * var(--multiplier-2));
+    }
+
+    .sprite-character {
+        height: calc(37px * var(--multiplier-2));
+        width: calc(37px * var(--multiplier-2));
+        bottom: calc(330px * var(--multiplier-2));
+        right: calc(160px * var(--multiplier-2));
+    }
+
+    .sprite-moon {
+        height: calc(92px * var(--multiplier-2));
+        width: calc(92px * var(--multiplier-2));
+        bottom: calc(442px * var(--multiplier-2));
+        right: calc(64px * var(--multiplier-2));
+    }
+
+    .sprite-left-stars {
+        height: calc(131px * var(--multiplier-2));
+        width: calc(100px * var(--multiplier-2));
+        bottom: calc(511px * var(--multiplier-2));
+        left: calc(18px * var(--multiplier-2));
+    }
+
+    .sprite-right-stars {
+        height: calc(131px * var(--multiplier-2));
+        width: calc(150px * var(--multiplier-2));
+        top: calc(56px * var(--multiplier-2));
+        right: calc(21px * var(--multiplier-2));
+    }
+}
+
+@media only screen and (min-width: 1120px) {
+    .sprite-layer-1 {
+        height: calc(109px * var(--multiplier-3));
+    }
+
+    .sprite-layer-2 {
+        height: calc(194px * var(--multiplier-3));
+        bottom: calc(62px * var(--multiplier-3));
+    }
+
+
+    .sprite-layer-3 {
+        height: calc(310px * var(--multiplier-3));
+        bottom: calc(181px * var(--multiplier-3));
+    }
+
+    .sprite-layer-4 {
+        height: calc(440px * var(--multiplier-3));
+        bottom: calc(280px * var(--multiplier-3));
+        background-size: 100% 100%;
+    }
+
+    .sprite-footprint {
+        height: calc(26px * var(--multiplier-3));
+        width: calc(26px * var(--multiplier-3));
+        bottom: calc(300px * var(--multiplier-3));
+        right: calc(180px * var(--multiplier-3));
+    }
+
+    .sprite-character {
+        height: calc(37px * var(--multiplier-3));
+        width: calc(37px * var(--multiplier-3));
+        bottom: calc(330px * var(--multiplier-3));
+        right: calc(160px * var(--multiplier-3));
+    }
+
+    .sprite-moon {
+        height: calc(92px * var(--multiplier-3));
+        width: calc(92px * var(--multiplier-3));
+        bottom: calc(442px * var(--multiplier-3));
+        right: calc(64px * var(--multiplier-3));
+    }
+
+    .sprite-left-stars {
+        height: calc(131px * var(--multiplier-3));
+        width: calc(100px * var(--multiplier-3));
+        bottom: calc(511px * var(--multiplier-3));
+        left: calc(18px * var(--multiplier-3));
+    }
+
+    .sprite-right-stars {
+        height: calc(131px * var(--multiplier-3));
+        width: calc(150px * var(--multiplier-3));
+        top: calc(56px * var(--multiplier-3));
+        right: calc(21px * var(--multiplier-3));
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .sprite-layer-1 {
+        height: calc(109px * var(--multiplier-1));
+    }
+
+    .sprite-layer-2 {
+        height: calc(240px * var(--multiplier-1));
+        bottom: calc(0px * var(--multiplier-1));
+    }
+
+
+    .sprite-layer-3 {
+        height: calc(310px * var(--multiplier-1));
+        bottom: calc(181px * var(--multiplier-1));
+    }
+
+    .sprite-layer-4 {
+        height: calc(440px * var(--multiplier-1));
+        bottom: calc(280px * var(--multiplier-1));
+        background-size: 100% 100%;
+    }
+
+    .sprite-footprint {
+        height: calc(26px * var(--multiplier-1));
+        width: calc(26px * var(--multiplier-1));
+        bottom: calc(295px * var(--multiplier-1));
+        right: calc(275px * var(--multiplier-1));
+    }
+
+    .sprite-character {
+        height: calc(37px * var(--multiplier-1));
+        width: calc(37px * var(--multiplier-1));
+        bottom: calc(325px * var(--multiplier-1));
+        right: calc(255px * var(--multiplier-1));
+    }
+
+    .sprite-moon {
+        height: calc(92px * var(--multiplier-1));
+        width: calc(92px * var(--multiplier-1));
+        bottom: calc(442px * var(--multiplier-1));
+        right: calc(64px * var(--multiplier-1));
+    }
+
+    .sprite-left-stars {
+        height: calc(131px * var(--multiplier-1));
+        width: calc(100px * var(--multiplier-1));
+        bottom: calc(511px * var(--multiplier-1));
+        left: calc(18px * var(--multiplier-1));
+    }
+
+    .sprite-right-stars {
+        height: calc(131px * var(--multiplier-1));
+        width: calc(150px * var(--multiplier-1));
+        top: calc(56px * var(--multiplier-1));
+        right: calc(21px * var(--multiplier-1));
+    }
+
+}
+
+@media only screen and (min-width: 1280px) {
+    .content-page {
+        width: 1200px;
+        margin: auto;
+    }
+}

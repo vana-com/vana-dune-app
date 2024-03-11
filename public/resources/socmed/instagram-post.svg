@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_20302" data-name="Rectangle 20302" width="24" height="24" transform="translate(-1638 -20464)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="ico_-_instagram-_default" data-name="ico - instagram- default" transform="translate(1638 20464)" clip-path="url(#clip-path)">
+    <g id="Group_18921" data-name="Group 18921" transform="translate(-1638 -20464)">
+      <path id="Path_30335" data-name="Path 30335" d="M12,15.188A3.188,3.188,0,1,0,8.812,12,3.188,3.188,0,0,0,12,15.188Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_30336" data-name="Path 30336" d="M16.5,3h-9A4.5,4.5,0,0,0,3,7.5v9A4.5,4.5,0,0,0,7.5,21h9A4.5,4.5,0,0,0,21,16.5v-9A4.5,4.5,0,0,0,16.5,3Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_30337" data-name="Path 30337" d="M16.375,7.625a1,1,0,1,0-1-1A1,1,0,0,0,16.375,7.625Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

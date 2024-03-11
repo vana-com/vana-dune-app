@@ -1,0 +1,42 @@
+.question_box_list {
+    border: 1px solid red;
+}
+
+.q_button_item {
+    border-radius: 38px;
+    min-height: 56px;
+    line-height: 21px;
+}
+
+.q_button_item:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.active {
+    background: #EC6A6A;
+    color: #fff;
+    border: 1px solid #EC6A6A;
+    transition: box-shadow 0.1s ease;
+    /* Smooth transition for box shadow */
+	box-shadow: 0 0 0 4px rgba(230, 196, 196, 1);
+}
+
+.pulse {
+    animation: pulse 0.3s ease-in-out forwards;
+    /* Add animation when class is applied */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.009);
+		box-shadow: 0 0 0 5px rgba(55, 55, 55, 0.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
