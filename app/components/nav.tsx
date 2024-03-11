@@ -119,6 +119,7 @@ export function Nav(prop: any) {
 		const state: any = searchParams.get('state');
 
 		const expiryDate: any = fn.getCookieExpiryDate(3);
+		let interval: any = null;
 
 		const reqOathToken = async () => {
 			try {
@@ -185,6 +186,9 @@ export function Nav(prop: any) {
 			if (!code || !scope || !state) {
 				if (cookies.get('_token')) {
 					reqGetBalance();
+					interval = setInterval(() => {
+						reqGetBalance();
+					}, 15000)
 				} else {
 					// if not landing page dont show
 					if (pathname != '/') {
@@ -207,6 +211,10 @@ export function Nav(prop: any) {
 			if (!guestToken) {
 				setCredentials();
 			}
+		}
+
+		return () => {
+			clearInterval(interval);
 		}
 	}, [pathname, searchParams, router, cookies, hasAttentionURL, guestToken])
 
