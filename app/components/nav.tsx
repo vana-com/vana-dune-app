@@ -48,6 +48,7 @@ export function Nav(prop: any) {
 		cookies.remove('_token');
 
 		fn.localStorage.remove('user_id');
+		fn.localStorage.remove('user_balance');
 	}
 
 	const goBack = () => {

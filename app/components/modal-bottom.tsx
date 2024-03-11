@@ -66,7 +66,7 @@ export function ModalBottom(prop: any) {
 			setFbUrl(`${url}?user_id=${user_id}`)
 			setTwitterUrl(`${url}?user_id=${user_id}`)
 
-			setTwitterTitle(`SANDS OF ARRAKIS \nEmbark on the Journey Through the Sands of Fate: Discover Your Inner Dune Character \n\n`)
+			// setTwitterTitle(`SANDS OF ARRAKIS \nEmbark on the Journey Through the Sands of Fate: Discover Your Inner Dune Character \n\n`)
 		}
 
 	}, [showModal]);

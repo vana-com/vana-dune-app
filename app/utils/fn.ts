@@ -69,4 +69,16 @@ export const fn = {
 			localStorage.removeItem(name);
 		},
 	},
+	truncateText(originalText: any = "", type: string = 'topText') {
+		if (!originalText) return "";
+
+		var sentences = originalText.split('. '); // Split text into sentences
+
+		if (type == 'topText') {
+			if (sentences.length <= 5) return originalText;
+			return sentences.slice(0, 5).join(". ");
+		} else {
+			return sentences.slice(5).join(". ")
+		}
+	}
 };

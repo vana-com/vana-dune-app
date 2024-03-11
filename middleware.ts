@@ -22,21 +22,6 @@ export function middleware(request: NextRequest) {
 			return NextResponse.redirect(new URL('/', request.url))
 		}
 
-		// if (!codeVerifier && currentUrl.includes("/result")) {
-		// 	return NextResponse.redirect(new URL('/', request.url))
-		// }
-
-		// if (codeVerifier && currentUrl.includes("/questions")) {
-		// 	return NextResponse.redirect(new URL('/', request.url))
-
-		// 	let isPromptGenerate = request.cookies.get('is-prompt-generate');
-		// 	if (!isPromptGenerate) {
-		// 		return NextResponse.next();
-		// 	} else {
-		// 		return NextResponse.redirect(new URL('/', request.url))
-		// 	}
-		// }
-
 		if (codeVerifier && currentUrl.includes("/loading")) {
 			let isPromptGenerate = request.cookies.get('is-prompt-generate');
 			let isClickDiscover = request.cookies.get('is-clicked-discover');
