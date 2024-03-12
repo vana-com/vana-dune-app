@@ -28,8 +28,10 @@ export function NavigationEvents() {
 
 				} else {
 					if (data.status) {
-						console.log("data", data)
 					} else {
+						if (data.isCharacterError) {
+							router.push("/error")
+						}
 						// todo: when not enough balance, add action not to able to visit the result page with it.
 					}
 				}

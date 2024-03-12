@@ -105,7 +105,7 @@ export function ModalBottom(prop: any) {
 
 					 */}
 
-					<div className="socMedia-item text-center">
+					{/* <div className="socMedia-item text-center">
 						<div
 							onClick={() => {
 								socialShare()
@@ -128,7 +128,7 @@ export function ModalBottom(prop: any) {
 							<Image src={`/resources/socmed/instagram-stories.svg`} alt="instragram-stories" width="24" height="24" />
 						</div>
 						<div className="min-h-[30px]">Instagram Stories</div>
-					</div>
+					</div> */}
 
 					<div className="socMedia-item text-center">
 						<TwitterShareButton
