@@ -33,6 +33,8 @@ export default function Result() {
 
 	const [resultData, setResultData] = useState<any>(null);
 	const [avatar, setAvatar] = useState<any>("")
+	const [topText, setTopText] = useState<any>(null)
+	const [bottomText, setBottomText] = useState<any>(null)
 
 	const [showSessionError, setShowSessionError] = useState(false);
 
@@ -74,8 +76,7 @@ export default function Result() {
 		setShowSocMed(false);
 	}
 
-	const onCloseSessionError = ()=> {
-		console.log("onCloseSessionError")
+	const onCloseSessionError = () => {
 		setShowSessionError(false)
 	}
 
@@ -125,7 +126,10 @@ export default function Result() {
 
 	useEffect(() => {
 		if (resultData) {
-			setAvatar(resultData.image)
+			setAvatar(resultData.image);
+
+			setTopText(fn.truncateText(`${resultData.story}`, 'topText'))
+			setBottomText(fn.truncateText(`${resultData.story}`, 'bottomText'))
 		}
 	}, [resultData, avatar])
 	return (
@@ -156,7 +160,7 @@ export default function Result() {
 						letterSpacing: '2px'
 
 					}}
-					className="mb-[10px] min-h-[81px] font-mona-sans-extra-bold text-primary-4 font-extrabold text-center  md:pt-[2rem] text-[50px] leading-[50px] xs:text-[61px] xs:leading-[61px] md:text-[81px] md:leading-[81px]">
+					className="mb-[10px] min-h-[81px] font-mona-sans-extra-bold text-primary-4 font-extrabold text-center md:pt-[2rem] text-[40px] leading-[40px] 4xs:text-[40px] 4xs:leading-[45px] 2xs:text-[50px] 2xs:leading-[50px] xs:text-[61px] xs:leading-[61px] md:text-[81px] md:leading-[81px]">
 					{
 						resultData ?
 							<p>{resultData.tribe}</p>
@@ -183,20 +187,19 @@ export default function Result() {
 						<div className="min-h-[81px] font-brooklyn font-normal text-[14px] text-primary-6">
 							{
 								resultData ?
-									<p>{resultData.story}</p>
+									<p>{topText}</p>
 									: null
 							}
 						</div>
 
 						<div className="image-text-content mt-[16px] pl-[18px]">
 							<Video></Video>
-
-							{/* 
-							todo: when  story >46 words, truncate here
-							create a function to truncate it
-							
-							*/}
-							<p className="pt-[16px] font-brooklyn font-normal text-[14px] text-primary-6">{''}</p>
+							{
+								bottomText ?
+									<p className="pt-[16px] font-brooklyn font-normal text-[14px] text-primary-6">{bottomText}</p>
+									:
+									null
+							}
 						</div>
 
 					</div>

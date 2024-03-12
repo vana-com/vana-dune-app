@@ -7,7 +7,7 @@ import { api } from "../api"
 export async function GET() {
 
 	// const delay = (ms: any) => new Promise(res => setTimeout(res, ms));
-	// await delay(40000)
+	// await delay(process.env.NEXT_PUBLIC_LOADING_TIME)
 	// let data: any = {
 	// 	"status": true,
 	// 	"story": "You're a Fremen, I'll name you \"Kuya Mara\". Like the Fremen, you're skilled in survival, thriving in life's harshest conditions. Your love for your family mirrors their strong community bonds, and your curiosity parallels their keen sense of awareness in the vast desert of life.",
