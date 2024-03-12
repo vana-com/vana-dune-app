@@ -76,10 +76,21 @@ export const fn = {
 
 		if (type == 'topText') {
 			if (sentences.length <= 5) return originalText;
-			return sentences.slice(0, 5).join(". ");
+			return sentences.slice(0, 5).join(". ") + ".";
 		} else {
 			return sentences.slice(5).join(". ")
 		}
+	},
+	sanitizeText(input: any) {
+		console.log("input", input)
+		if (!input) return "";
+		// Define a regular expression to match special characters
+		var specialChars = /[!@#$%^&*()?":{}|<>]/g;
+
+		// Remove special characters from the input string
+		var result = input.replace(specialChars, '');
+
+		return result;
 	},
 	checkBrowserType() {
 		if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {

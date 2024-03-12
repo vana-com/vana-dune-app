@@ -33,6 +33,7 @@ export default function Result() {
 
 	const [resultData, setResultData] = useState<any>(null);
 	const [avatar, setAvatar] = useState<any>("")
+	const [qoute, setQoute] = useState<any>("")
 	const [topText, setTopText] = useState<any>(null)
 	const [bottomText, setBottomText] = useState<any>(null)
 
@@ -128,6 +129,7 @@ export default function Result() {
 		if (resultData) {
 			setAvatar(resultData.image);
 
+			setQoute(fn.sanitizeText(resultData.quote))
 			setTopText(fn.truncateText(`${resultData.story}`, 'topText'))
 			setBottomText(fn.truncateText(`${resultData.story}`, 'bottomText'))
 		}
@@ -179,7 +181,7 @@ export default function Result() {
 						src={`/resources/quote.svg`} alt="qoute" width="56" height="56" />
 					<p className="block px-[5px]">{
 						resultData ?
-							resultData.quote : ''}</p>
+							qoute : ''}</p>
 				</div>
 
 				<div className="content-data px-[12px] pt-[12px] pb-[24px] mb-[32px]">
