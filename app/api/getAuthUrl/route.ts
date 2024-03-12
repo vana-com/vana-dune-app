@@ -6,8 +6,7 @@ import { api } from "../api"
 
 export async function GET(req: Request, res: Response) {
 
-	// let temp_url = "https://82a7-180-191-16-36.ngrok-free.app";
-	// // let temp_url = "http://localhost:3000/";
+	// let temp_url = "http://localhost:3000/";
 
 	// let data: any = {
 	// 	"status": true,

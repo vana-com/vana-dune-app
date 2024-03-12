@@ -12,7 +12,9 @@ type Props = {
 export default function ExportImageLayout({ children }: Props) {
 	return (
 		<>
-			{children}
+			<div className="overflow-hidden">
+				{children}
+			</div>
 		</>
 	)
 }

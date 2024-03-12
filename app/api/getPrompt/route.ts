@@ -6,6 +6,16 @@ import { data } from ".."
 import { api } from "../api"
 export async function GET() {
 
+	// // when fail
+	// let data: any = {
+	// 	"status": false,
+	// 	"isCharacterError": true,
+	// 	message: "HTTP request returned status code 404:\n{\"statusCode\":404,\"name\":\"ModelNotFoundException\",\"message\":\"Character 9667bf0b-061d-4816-9dd5-a8c40a848747 does not hav (truncated...)\n",
+	// };
+
+	// return NextResponse.json(data)
+
+
 	// const delay = (ms: any) => new Promise(res => setTimeout(res, ms));
 	// await delay(process.env.NEXT_PUBLIC_LOADING_TIME)
 	// let data: any = {

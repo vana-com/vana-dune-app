@@ -11,9 +11,7 @@ import { toPng } from 'html-to-image';
 
 // https://www.npmjs.com/package/react-loading
 import ReactLoading from 'react-loading';
-
 export default function ExportImage() {
-
 	const ref = useRef(null)
 	const [height, setHeight] = useState<any>(0)
 	const [padding, setPadding] = useState<any>(0)
@@ -34,7 +32,7 @@ export default function ExportImage() {
 	useEffect(() => {
 		if (hasWindow) {
 
-			const getWindowDimensions = () => {
+			const getWindowDimensions: any = () => {
 				const width = hasWindow ? window.innerWidth : null;
 				const height = hasWindow ? window.innerHeight : null;
 				return {
@@ -43,13 +41,16 @@ export default function ExportImage() {
 				};
 			}
 
+			setWindowDimensions(getWindowDimensions());
 			const handleResize = () => {
 				setWindowDimensions(getWindowDimensions());
 			}
 
+
 			window.addEventListener('resize', handleResize);
 			return () => window.removeEventListener('resize', handleResize);
 		}
+
 	}, [hasWindow]);
 
 	const elementRef: any = useRef(null);
@@ -97,6 +98,9 @@ export default function ExportImage() {
 
 				var filename = resultData.tribe + "-" + new Date().getTime()
 				if (isMobile || fn.getMobileOperatingSystem() == 'iOS') {
+					// console.log("fn.getMobileOperatingSystem()", fn.getMobileOperatingSystem())
+					// console.log("fn.checkBrowserType()", fn.checkBrowserType())
+
 					if (fn.getMobileOperatingSystem() == 'iOS') {
 						setDataUrl(dataUrl)
 						setHeight(elementRef.current.clientHeight);
@@ -110,9 +114,14 @@ export default function ExportImage() {
 						link.click();
 						document.body.removeChild(link);
 						setIsLoaded(true)
-						setTimeout(() => {
-							window.close();
-						}, 1000);
+
+						if (fn.checkBrowserType() == 'Firefox') {
+
+						} else {
+							setTimeout(() => {
+								window.close();
+							}, 1000);
+						}
 					}
 
 				} else {
@@ -142,17 +151,12 @@ export default function ExportImage() {
 		setIsMobile(fn.isMobile())
 
 		const getSavedPrompt = async (user_id: any = '') => {
-			if (!user_id) {
-				window.close();
-				return;
-			}
-
 			try {
 				const res = await fetch(`api/getSavedPrompt/${user_id}`);
 
 				const data = await res.json();
 				if (data && data.error) {
-
+					window.close();
 				} else {
 					if (data.status) {
 						setResultData(data)
@@ -168,11 +172,7 @@ export default function ExportImage() {
 
 		if (typeof window !== 'undefined') {
 			let user_id: any = fn.localStorage.get('user_id');
-			if (user_id) {
-				getSavedPrompt(user_id)
-			} {
-
-			}
+			getSavedPrompt(user_id)
 		}
 		return () => { }
 	}, [])
@@ -181,7 +181,7 @@ export default function ExportImage() {
 		<ReactLoading type={type} color={color} height={50} width={50} />
 	);
 
-	if (!avatar) return null;
+	// if (!avatar) return
 	return (
 		<>
 			{
@@ -197,7 +197,7 @@ export default function ExportImage() {
 
 			{
 				dataUrl ?
-					<div className={` fixed top-0 right-0 bottom-0 left-0 z-[9999] backdrop-blur-sm`} >
+					<div className={` fixed top-0 right-0 bottom-0 left-0 z-[9999] backdrop-blur-sm overflow-y-auto`} >
 						<div className="w-[100%] h-[100%] flex justify-center items-center">
 							<img
 								style={{
