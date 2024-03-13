@@ -88,7 +88,7 @@ export function ModalBottom(prop: any) {
 				<div className="socMedia-list font-brooklyn font-semibold text-[10px] flex items-center flex-wrap md:px-[6rem] lg:px-[8rem] xl:px-[10rem] 2xl:w-[1200px] 2xl:mx-auto">
 
 					<div className="socMedia-item text-center">
-						<Link href="/exportimage" target="_blank">
+						<Link href="/exportimage?saveImage=1" target="_blank">
 							<div className="bg-[#A8DADC] socMedia-icon-box flex items-center justify-center rounded-[50%] mx-auto mb-[10px]">
 								<Image src={`/resources/socmed/download.svg`} alt="download" width="24" height="24" />
 							</div>
