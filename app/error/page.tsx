@@ -50,18 +50,18 @@ export default function NotFound() {
 							/>
 
 							<Image src={`/resources/bg/right-stars.png`} alt="right-stars" width="150" height="131"
-								className="w-[150px] h-[131px]  absolute top-[45px] right-[3px]"
+								className="w-[150px] h-[131px] absolute top-[45px] right-[3px]"
 							/>
 
 							<Image src={`/resources/bg/left-stars.png`} alt="left-stars" width="100" height="131"
-								className="w-[100px] h-[131px]  absolute top-[70px] left-[32px] z-10"
+								className="h-[131px]  absolute top-[70px] left-[32px] z-10 w-[100px]"
 							/>
 
-							<div className="bg-fog-2 w-full h-[411px] absolute bottom-[220px] bg-cover"></div>
+							<div className="w-full h-[411px] absolute bottom-[220px] bg-cover bg-fog-2"></div>
 
-							<div className="bg-sand-layer-2 w-full h-[180px] absolute bottom-[124px] bg-cover"></div>
+							<div className="w-full h-[180px] absolute bottom-[124px] bg-cover bg-sand-layer-2"></div>
 
-							<div className="bg-sand-layer-1 w-full h-[180px] absolute bottom-0 bg-cover"></div>
+							<div className="w-full h-[180px] absolute bottom-0 bg-cover bg-sand-layer-1"></div>
 
 						</div>
 					</div>

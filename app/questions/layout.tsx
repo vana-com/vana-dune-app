@@ -24,7 +24,7 @@ export default async function QuestionsLayout({ children }: Props) {
 							style={{
 								backgroundSize: '100% 100%'
 							}}
-							className="bg-sub-layer-2 w-full h-[112px] absolute top-[35px] bg-cover"></div>
+							className="w-full h-[112px] absolute top-[35px] bg-cover bg-sub-layer-2"></div>
 
 						<Image src={`/resources/bg/right-stars.png`} alt="right-stars" width="150" height="131"
 							className="w-[150px] h-[131px]  absolute top-[45px] right-[3px]"
@@ -37,9 +37,9 @@ export default async function QuestionsLayout({ children }: Props) {
 						<Image src={`/resources/bg/person.svg`} alt="footprint" width="46" height="26"
 							className="w-[29px] h-[89px]  absolute bottom-[46px] mx-auto z-[1]  left-1/2 transform -translate-x-1/2"
 						/>
-						<div className="bg-sub-layer-3 w-full h-[154px] absolute bottom-[180px] bg-cover"></div>
+						<div className="w-full h-[154px] absolute bottom-[180px] bg-cover bg-sub-layer-3"></div>
 
-						<div className="bg-sub-layer-1 w-full h-[69px] absolute bottom-0 bg-cover"></div>
+						<div className="w-full h-[69px] absolute bottom-0 bg-cover bg-sub-layer-1"></div>
 					</div>
 				</div>
 			</div>

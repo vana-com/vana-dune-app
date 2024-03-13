@@ -25,7 +25,7 @@ export default function QuestionsLayout({ children }: Props) {
 						style={{
 							backgroundSize: '100% 100%'
 						}}
-						className="bg-sub-layer-2 w-full h-[112px] absolute top-[35px] bg-cover"></div>
+						className="w-full h-[112px] absolute top-[35px] bg-cover bg-sub-layer-2"></div>
 
 					<Image src={`/resources/bg/right-stars.png`} alt="right-stars" width="150" height="131"
 						className="w-[150px] h-[131px]  absolute top-[45px] right-[3px]"
