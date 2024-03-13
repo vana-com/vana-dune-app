@@ -82,7 +82,6 @@ export const fn = {
 		}
 	},
 	sanitizeText(input: any) {
-		console.log("input", input)
 		if (!input) return "";
 		// Define a regular expression to match special characters
 		var specialChars = /[!@#$%^&*()?":{}|<>]/g;

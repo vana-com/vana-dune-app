@@ -39,7 +39,20 @@
 @media only screen and (min-width: 420px) {
     .sprite-fog {
         background-size: 100% 100%;
+    }
 
+    .bg-sand-layer-1 {
+        background-size: 100% 100%;
+        height: calc(180px * var(--multiplier-1));
+    }
+
+    .bg-sand-layer-2 {
+        background-size: 100% 100%;
+        height: calc(180px * var(--multiplier-1));
+    }
+
+    .bg-fog-2 {
+        background-size: 100% 100%;
     }
 }
 
@@ -105,6 +118,17 @@
         top: calc(56px * var(--multiplier-1));
         right: calc(21px * var(--multiplier-1));
     }
+
+    .bg-sand-layer-1 {
+        background-size: 100% 100%;
+        height: calc(210px * var(--multiplier-1));
+    }
+
+    .bg-sand-layer-2 {
+        background-size: 100% 100%;
+        height: calc(210px * var(--multiplier-1));
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -345,4 +369,72 @@
         width: 1200px;
         margin: auto;
     }
+
+    .sprite-layer-1 {
+        height: calc(109px * var(--multiplier-1));
+    }
+
+    .sprite-layer-2 {
+        height: calc(260px * var(--multiplier-1));
+        bottom: calc(0px * var(--multiplier-1));
+    }
+
+
+    .sprite-layer-3 {
+        height: calc(360px * var(--multiplier-1));
+        bottom: calc(181px * var(--multiplier-1));
+    }
+
+    .sprite-layer-4 {
+        height: calc(440px * var(--multiplier-1));
+        bottom: calc(280px * var(--multiplier-1));
+        background-size: 100% 100%;
+    }
+
+    .sprite-footprint {
+        height: calc(26px * var(--multiplier-1));
+        width: calc(26px * var(--multiplier-1));
+        bottom: calc(320px * var(--multiplier-1));
+        right: calc(275px * var(--multiplier-1));
+    }
+
+    .sprite-character {
+        height: calc(37px * var(--multiplier-1));
+        width: calc(37px * var(--multiplier-1));
+        bottom: calc(350px * var(--multiplier-1));
+        right: calc(255px * var(--multiplier-1));
+    }
+
+    .sprite-moon {
+        height: calc(92px * var(--multiplier-1));
+        width: calc(92px * var(--multiplier-1));
+        bottom: calc(442px * var(--multiplier-1));
+        right: calc(64px * var(--multiplier-1));
+    }
+
+    .sprite-left-stars {
+        height: calc(131px * var(--multiplier-1));
+        width: calc(100px * var(--multiplier-1));
+        bottom: calc(511px * var(--multiplier-1));
+        left: calc(18px * var(--multiplier-1));
+    }
+
+    .sprite-right-stars {
+        height: calc(131px * var(--multiplier-1));
+        width: calc(150px * var(--multiplier-1));
+        top: calc(56px * var(--multiplier-1));
+        right: calc(21px * var(--multiplier-1));
+    }
+
+
+    .bg-sand-layer-1 {
+        background-size: 100% 100%;
+        height: calc(210px * var(--multiplier-1));
+    }
+
+    .bg-sand-layer-2 {
+        background-size: 100% 100%;
+        height: calc(210px * var(--multiplier-1));
+    }
+
 }
