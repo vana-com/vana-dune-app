@@ -94,7 +94,7 @@ export default function Result() {
 
 				const data = await res.json();
 				if (data && data.error) {
-
+					setShowSessionError(true)
 				} else {
 					if (data.status) {
 						setResultData(data)
