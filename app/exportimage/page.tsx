@@ -11,7 +11,13 @@ import { toPng } from 'html-to-image';
 
 // https://www.npmjs.com/package/react-loading
 import ReactLoading from 'react-loading';
+
+import { useSearchParams, useRouter } from 'next/navigation';
+
 export default function ExportImage() {
+	const searchParams = useSearchParams()
+	const saveImage = searchParams.get('saveImage'); // for the guest
+	const router = useRouter()
 	const ref = useRef(null)
 	const [height, setHeight] = useState<any>(0)
 	const [padding, setPadding] = useState<any>(0)
@@ -156,7 +162,11 @@ export default function ExportImage() {
 
 				const data = await res.json();
 				if (data && data.error) {
-					window.close();
+					if (saveImage) {
+						window.close();
+					} else {
+						router.replace("/")
+					}
 				} else {
 					if (data.status) {
 						setResultData(data)
@@ -175,7 +185,7 @@ export default function ExportImage() {
 			getSavedPrompt(user_id)
 		}
 		return () => { }
-	}, [])
+	}, [router, saveImage])
 
 	const Loading = ({ type, color }: any) => (
 		<ReactLoading type={type} color={color} height={50} width={50} />
