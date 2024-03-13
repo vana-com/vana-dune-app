@@ -405,28 +405,6 @@
         right: calc(255px * var(--multiplier-1));
     }
 
-    .sprite-moon {
-        height: calc(92px * var(--multiplier-1));
-        width: calc(92px * var(--multiplier-1));
-        bottom: calc(442px * var(--multiplier-1));
-        right: calc(64px * var(--multiplier-1));
-    }
-
-    .sprite-left-stars {
-        height: calc(131px * var(--multiplier-1));
-        width: calc(100px * var(--multiplier-1));
-        bottom: calc(511px * var(--multiplier-1));
-        left: calc(18px * var(--multiplier-1));
-    }
-
-    .sprite-right-stars {
-        height: calc(131px * var(--multiplier-1));
-        width: calc(150px * var(--multiplier-1));
-        top: calc(56px * var(--multiplier-1));
-        right: calc(21px * var(--multiplier-1));
-    }
-
-
     .bg-sand-layer-1 {
         background-size: 100% 100%;
         height: calc(210px * var(--multiplier-1));
@@ -437,4 +415,16 @@
         height: calc(210px * var(--multiplier-1));
     }
 
+}
+
+@media only screen and (min-width: 1440px) {
+    .sprite-layer-1 {
+        height: calc(109px * var(--multiplier-1));
+        bottom: calc(-50px * var(--multiplier-1));
+    }
+
+    .sprite-layer-2 {
+        height: calc(300px* var(--multiplier-1));
+        bottom: calc(-50px* var(--multiplier-1));
+    }
 }
