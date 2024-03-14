@@ -14,417 +14,417 @@
 .sprite-layer-2,
 .sprite-layer-3,
 .sprite-layer-4 {
-    background-position: center center;
+    background-position: center center !important;
 }
 
 .sprite-layer-4 {
-    background-size: 100% 100%;
+    background-size: 100% 100% !important;
 }
 
 /* Media Queries */
 @media only screen and (min-width: 382px) {
     .sprite-layer-1 {
-        height: 134px;
+        height: 134px !important;
     }
 
     .sprite-layer-2 {
-        height: 134px;
+        height: 134px !important;
     }
 
     .sprite-layer-2 {
-        height: 134px;
+        height: 134px !important;
     }
 }
 
 @media only screen and (min-width: 420px) {
     .sprite-fog {
-        background-size: 100% 100%;
+        background-size: 100% 100% !important;
     }
 
     .bg-sand-layer-1 {
-        background-size: 100% 100%;
-        height: calc(180px * var(--multiplier-1));
+        background-size: 100% 100% !important;
+        height: calc(180px * var(--multiplier-1)) !important;
     }
 
     .bg-sand-layer-2 {
-        background-size: 100% 100%;
-        height: calc(180px * var(--multiplier-1));
+        background-size: 100% 100% !important;
+        height: calc(180px * var(--multiplier-1)) !important;
     }
 
     .bg-fog-2 {
-        background-size: 100% 100%;
+        background-size: 100% 100% !important;
     }
 }
 
 @media only screen and (min-width: 420px) {
     .sprite-fog {
-        background-size: 100% 100%;
+        background-size: 100% 100% !important;
     }
 }
 
 @media only screen and (min-width: 585px) {
     .sprite-layer-1 {
-        height: calc(109px * var(--multiplier-1));
+        height: calc(109px * var(--multiplier-1)) !important;
     }
 
     .sprite-layer-2 {
-        height: calc(198px * var(--multiplier-1));
-        bottom: calc(62px * var(--multiplier-1));
+        height: calc(198px * var(--multiplier-1)) !important;
+        bottom: calc(62px * var(--multiplier-1)) !important;
     }
 
 
     .sprite-layer-3 {
-        height: calc(310px * var(--multiplier-1));
-        bottom: calc(181px * var(--multiplier-1));
+        height: calc(310px * var(--multiplier-1)) !important;
+        bottom: calc(181px * var(--multiplier-1)) !important;
     }
 
     .sprite-layer-4 {
-        height: calc(440px * var(--multiplier-1));
-        bottom: calc(280px * var(--multiplier-1));
-        background-size: 100% 100%;
+        height: calc(440px * var(--multiplier-1)) !important;
+        bottom: calc(280px * var(--multiplier-1)) !important;
+        background-size: 100% 100% !important;
     }
 
     .sprite-footprint {
-        height: calc(26px * var(--multiplier-1));
-        width: calc(26px * var(--multiplier-1));
-        bottom: calc(300px * var(--multiplier-1));
-        right: calc(180px * var(--multiplier-1));
+        height: calc(26px * var(--multiplier-1)) !important;
+        width: calc(26px * var(--multiplier-1)) !important;
+        bottom: calc(300px * var(--multiplier-1)) !important;
+        right: calc(180px * var(--multiplier-1)) !important;
     }
 
     .sprite-character {
-        height: calc(37px * var(--multiplier-1));
-        width: calc(37px * var(--multiplier-1));
-        bottom: calc(330px * var(--multiplier-1));
-        right: calc(160px * var(--multiplier-1));
+        height: calc(37px * var(--multiplier-1)) !important;
+        width: calc(37px * var(--multiplier-1)) !important;
+        bottom: calc(330px * var(--multiplier-1)) !important;
+        right: calc(160px * var(--multiplier-1)) !important;
     }
 
     .sprite-moon {
-        height: calc(92px * var(--multiplier-1));
-        width: calc(92px * var(--multiplier-1));
-        bottom: calc(442px * var(--multiplier-1));
-        right: calc(64px * var(--multiplier-1));
+        height: calc(92px * var(--multiplier-1)) !important;
+        width: calc(92px * var(--multiplier-1)) !important;
+        bottom: calc(442px * var(--multiplier-1)) !important;
+        right: calc(64px * var(--multiplier-1)) !important;
     }
 
     .sprite-left-stars {
-        height: calc(131px * var(--multiplier-1));
-        width: calc(100px * var(--multiplier-1));
-        bottom: calc(511px * var(--multiplier-1));
-        left: calc(18px * var(--multiplier-1));
+        height: calc(131px * var(--multiplier-1)) !important;
+        width: calc(100px * var(--multiplier-1)) !important;
+        bottom: calc(511px * var(--multiplier-1)) !important;
+        left: calc(18px * var(--multiplier-1)) !important;
     }
 
     .sprite-right-stars {
-        height: calc(131px * var(--multiplier-1));
-        width: calc(150px * var(--multiplier-1));
-        top: calc(56px * var(--multiplier-1));
-        right: calc(21px * var(--multiplier-1));
+        height: calc(131px * var(--multiplier-1)) !important;
+        width: calc(150px * var(--multiplier-1)) !important;
+        top: calc(56px * var(--multiplier-1)) !important;
+        right: calc(21px * var(--multiplier-1)) !important;
     }
 
     .bg-sand-layer-1 {
-        background-size: 100% 100%;
-        height: calc(210px * var(--multiplier-1));
+        background-size: 100% 100% !important;
+        height: calc(210px * var(--multiplier-1)) !important;
     }
 
     .bg-sand-layer-2 {
-        background-size: 100% 100%;
-        height: calc(210px * var(--multiplier-1));
+        background-size: 100% 100% !important;
+        height: calc(210px * var(--multiplier-1)) !important;
     }
 
 }
 
 @media only screen and (min-width: 768px) {
     .sprite-layer-1 {
-        height: calc(109px * var(--multiplier-1));
+        height: calc(109px * var(--multiplier-1)) !important;
     }
 
     .sprite-layer-2 {
-        height: calc(198px * var(--multiplier-1));
-        bottom: calc(62px * var(--multiplier-1));
+        height: calc(198px * var(--multiplier-1)) !important;
+        bottom: calc(62px * var(--multiplier-1)) !important;
     }
 
 
     .sprite-layer-3 {
-        height: calc(310px * var(--multiplier-1));
-        bottom: calc(181px * var(--multiplier-1));
+        height: calc(310px * var(--multiplier-1)) !important;
+        bottom: calc(181px * var(--multiplier-1)) !important;
     }
 
     .sprite-layer-4 {
-        height: calc(440px * var(--multiplier-1));
-        bottom: calc(280px * var(--multiplier-1));
-        background-size: 100% 100%;
+        height: calc(440px * var(--multiplier-1)) !important;
+        bottom: calc(280px * var(--multiplier-1)) !important;
+        background-size: 100% 100% !important;
     }
 
     .sprite-footprint {
-        height: calc(26px * var(--multiplier-1));
-        width: calc(26px * var(--multiplier-1));
-        bottom: calc(300px * var(--multiplier-1));
-        right: calc(180px * var(--multiplier-1));
+        height: calc(26px * var(--multiplier-1)) !important;
+        width: calc(26px * var(--multiplier-1)) !important;
+        bottom: calc(300px * var(--multiplier-1)) !important;
+        right: calc(180px * var(--multiplier-1)) !important;
     }
 
     .sprite-character {
-        height: calc(37px * var(--multiplier-1));
-        width: calc(37px * var(--multiplier-1));
-        bottom: calc(330px * var(--multiplier-1));
-        right: calc(160px * var(--multiplier-1));
+        height: calc(37px * var(--multiplier-1)) !important;
+        width: calc(37px * var(--multiplier-1)) !important;
+        bottom: calc(330px * var(--multiplier-1)) !important;
+        right: calc(160px * var(--multiplier-1)) !important;
     }
 
     .sprite-moon {
-        height: calc(92px * var(--multiplier-1));
-        width: calc(92px * var(--multiplier-1));
-        bottom: calc(442px * var(--multiplier-1));
-        right: calc(64px * var(--multiplier-1));
+        height: calc(92px * var(--multiplier-1)) !important;
+        width: calc(92px * var(--multiplier-1)) !important;
+        bottom: calc(442px * var(--multiplier-1)) !important;
+        right: calc(64px * var(--multiplier-1)) !important;
     }
 
     .sprite-left-stars {
-        height: calc(131px * var(--multiplier-1));
-        width: calc(100px * var(--multiplier-1));
-        bottom: calc(511px * var(--multiplier-1));
-        left: calc(18px * var(--multiplier-1));
+        height: calc(131px * var(--multiplier-1)) !important;
+        width: calc(100px * var(--multiplier-1)) !important;
+        bottom: calc(511px * var(--multiplier-1)) !important;
+        left: calc(18px * var(--multiplier-1)) !important;
     }
 
     .sprite-right-stars {
-        height: calc(131px * var(--multiplier-1));
-        width: calc(150px * var(--multiplier-1));
-        top: calc(56px * var(--multiplier-1));
-        right: calc(21px * var(--multiplier-1));
+        height: calc(131px * var(--multiplier-1)) !important;
+        width: calc(150px * var(--multiplier-1)) !important;
+        top: calc(56px * var(--multiplier-1)) !important;
+        right: calc(21px * var(--multiplier-1)) !important;
     }
 }
 
 @media only screen and (min-width: 1010px) {
     .sprite-layer-1 {
-        height: calc(109px * var(--multiplier-2));
+        height: calc(109px * var(--multiplier-2)) !important;
     }
 
     .sprite-layer-2 {
-        height: calc(198px * var(--multiplier-2));
-        bottom: calc(62px * var(--multiplier-2));
+        height: calc(198px * var(--multiplier-2)) !important;
+        bottom: calc(62px * var(--multiplier-2)) !important;
     }
 
 
     .sprite-layer-3 {
-        height: calc(310px * var(--multiplier-2));
-        bottom: calc(181px * var(--multiplier-2));
+        height: calc(310px * var(--multiplier-2)) !important;
+        bottom: calc(181px * var(--multiplier-2)) !important;
     }
 
     .sprite-layer-4 {
-        height: calc(440px * var(--multiplier-2));
-        bottom: calc(280px * var(--multiplier-2));
-        background-size: 100% 100%;
+        height: calc(440px * var(--multiplier-2)) !important;
+        bottom: calc(280px * var(--multiplier-2)) !important;
+        background-size: 100% 100% !important;
     }
 
     .sprite-footprint {
-        height: calc(26px * var(--multiplier-2));
-        width: calc(26px * var(--multiplier-2));
-        bottom: calc(300px * var(--multiplier-2));
-        right: calc(180px * var(--multiplier-2));
+        height: calc(26px * var(--multiplier-2)) !important;
+        width: calc(26px * var(--multiplier-2)) !important;
+        bottom: calc(300px * var(--multiplier-2)) !important;
+        right: calc(180px * var(--multiplier-2)) !important;
     }
 
     .sprite-character {
-        height: calc(37px * var(--multiplier-2));
-        width: calc(37px * var(--multiplier-2));
-        bottom: calc(330px * var(--multiplier-2));
-        right: calc(160px * var(--multiplier-2));
+        height: calc(37px * var(--multiplier-2)) !important;
+        width: calc(37px * var(--multiplier-2)) !important;
+        bottom: calc(330px * var(--multiplier-2)) !important;
+        right: calc(160px * var(--multiplier-2)) !important;
     }
 
     .sprite-moon {
-        height: calc(92px * var(--multiplier-2));
-        width: calc(92px * var(--multiplier-2));
-        bottom: calc(442px * var(--multiplier-2));
-        right: calc(64px * var(--multiplier-2));
+        height: calc(92px * var(--multiplier-2)) !important;
+        width: calc(92px * var(--multiplier-2)) !important;
+        bottom: calc(442px * var(--multiplier-2)) !important;
+        right: calc(64px * var(--multiplier-2)) !important;
     }
 
     .sprite-left-stars {
-        height: calc(131px * var(--multiplier-2));
-        width: calc(100px * var(--multiplier-2));
-        bottom: calc(511px * var(--multiplier-2));
-        left: calc(18px * var(--multiplier-2));
+        height: calc(131px * var(--multiplier-2)) !important;
+        width: calc(100px * var(--multiplier-2)) !important;
+        bottom: calc(511px * var(--multiplier-2)) !important;
+        left: calc(18px * var(--multiplier-2)) !important;
     }
 
     .sprite-right-stars {
-        height: calc(131px * var(--multiplier-2));
-        width: calc(150px * var(--multiplier-2));
-        top: calc(56px * var(--multiplier-2));
-        right: calc(21px * var(--multiplier-2));
+        height: calc(131px * var(--multiplier-2)) !important;
+        width: calc(150px * var(--multiplier-2)) !important;
+        top: calc(56px * var(--multiplier-2)) !important;
+        right: calc(21px * var(--multiplier-2)) !important;
     }
 }
 
 @media only screen and (min-width: 1120px) {
     .sprite-layer-1 {
-        height: calc(109px * var(--multiplier-3));
+        height: calc(109px * var(--multiplier-3)) !important;
     }
 
     .sprite-layer-2 {
-        height: calc(194px * var(--multiplier-3));
-        bottom: calc(62px * var(--multiplier-3));
+        height: calc(194px * var(--multiplier-3)) !important;
+        bottom: calc(62px * var(--multiplier-3)) !important;
     }
 
 
     .sprite-layer-3 {
-        height: calc(310px * var(--multiplier-3));
-        bottom: calc(181px * var(--multiplier-3));
+        height: calc(310px * var(--multiplier-3)) !important;
+        bottom: calc(181px * var(--multiplier-3)) !important;
     }
 
     .sprite-layer-4 {
-        height: calc(440px * var(--multiplier-3));
-        bottom: calc(280px * var(--multiplier-3));
-        background-size: 100% 100%;
+        height: calc(440px * var(--multiplier-3)) !important;
+        bottom: calc(280px * var(--multiplier-3)) !important;
+        background-size: 100% 100% !important;
     }
 
     .sprite-footprint {
-        height: calc(26px * var(--multiplier-3));
-        width: calc(26px * var(--multiplier-3));
-        bottom: calc(300px * var(--multiplier-3));
-        right: calc(180px * var(--multiplier-3));
+        height: calc(26px * var(--multiplier-3)) !important;
+        width: calc(26px * var(--multiplier-3)) !important;
+        bottom: calc(300px * var(--multiplier-3)) !important;
+        right: calc(180px * var(--multiplier-3)) !important;
     }
 
     .sprite-character {
-        height: calc(37px * var(--multiplier-3));
-        width: calc(37px * var(--multiplier-3));
-        bottom: calc(330px * var(--multiplier-3));
-        right: calc(160px * var(--multiplier-3));
+        height: calc(37px * var(--multiplier-3)) !important;
+        width: calc(37px * var(--multiplier-3)) !important;
+        bottom: calc(330px * var(--multiplier-3)) !important;
+        right: calc(160px * var(--multiplier-3)) !important;
     }
 
     .sprite-moon {
-        height: calc(92px * var(--multiplier-3));
-        width: calc(92px * var(--multiplier-3));
-        bottom: calc(442px * var(--multiplier-3));
-        right: calc(64px * var(--multiplier-3));
+        height: calc(92px * var(--multiplier-3)) !important;
+        width: calc(92px * var(--multiplier-3)) !important;
+        bottom: calc(442px * var(--multiplier-3)) !important;
+        right: calc(64px * var(--multiplier-3)) !important;
     }
 
     .sprite-left-stars {
-        height: calc(131px * var(--multiplier-3));
-        width: calc(100px * var(--multiplier-3));
-        bottom: calc(511px * var(--multiplier-3));
-        left: calc(18px * var(--multiplier-3));
+        height: calc(131px * var(--multiplier-3)) !important;
+        width: calc(100px * var(--multiplier-3)) !important;
+        bottom: calc(511px * var(--multiplier-3)) !important;
+        left: calc(18px * var(--multiplier-3)) !important;
     }
 
     .sprite-right-stars {
-        height: calc(131px * var(--multiplier-3));
-        width: calc(150px * var(--multiplier-3));
-        top: calc(56px * var(--multiplier-3));
-        right: calc(21px * var(--multiplier-3));
+        height: calc(131px * var(--multiplier-3)) !important;
+        width: calc(150px * var(--multiplier-3)) !important;
+        top: calc(56px * var(--multiplier-3)) !important;
+        right: calc(21px * var(--multiplier-3)) !important;
     }
 }
 
 @media only screen and (min-width: 1200px) {
     .sprite-layer-1 {
-        height: calc(109px * var(--multiplier-1));
+        height: calc(109px * var(--multiplier-1)) !important;
     }
 
     .sprite-layer-2 {
-        height: calc(240px * var(--multiplier-1));
-        bottom: calc(0px * var(--multiplier-1));
+        height: calc(240px * var(--multiplier-1)) !important;
+        bottom: calc(0px * var(--multiplier-1)) !important;
     }
 
 
     .sprite-layer-3 {
-        height: calc(310px * var(--multiplier-1));
-        bottom: calc(181px * var(--multiplier-1));
+        height: calc(310px * var(--multiplier-1)) !important;
+        bottom: calc(181px * var(--multiplier-1)) !important;
     }
 
     .sprite-layer-4 {
-        height: calc(440px * var(--multiplier-1));
-        bottom: calc(280px * var(--multiplier-1));
-        background-size: 100% 100%;
+        height: calc(440px * var(--multiplier-1)) !important;
+        bottom: calc(280px * var(--multiplier-1)) !important;
+        background-size: 100% 100% !important;
     }
 
     .sprite-footprint {
-        height: calc(26px * var(--multiplier-1));
-        width: calc(26px * var(--multiplier-1));
-        bottom: calc(295px * var(--multiplier-1));
-        right: calc(275px * var(--multiplier-1));
+        height: calc(26px * var(--multiplier-1)) !important;
+        width: calc(26px * var(--multiplier-1)) !important;
+        bottom: calc(295px * var(--multiplier-1)) !important;
+        right: calc(275px * var(--multiplier-1)) !important;
     }
 
     .sprite-character {
-        height: calc(37px * var(--multiplier-1));
-        width: calc(37px * var(--multiplier-1));
-        bottom: calc(325px * var(--multiplier-1));
-        right: calc(255px * var(--multiplier-1));
+        height: calc(37px * var(--multiplier-1)) !important;
+        width: calc(37px * var(--multiplier-1)) !important;
+        bottom: calc(325px * var(--multiplier-1)) !important;
+        right: calc(255px * var(--multiplier-1)) !important;
     }
 
     .sprite-moon {
-        height: calc(92px * var(--multiplier-1));
-        width: calc(92px * var(--multiplier-1));
-        bottom: calc(442px * var(--multiplier-1));
-        right: calc(64px * var(--multiplier-1));
+        height: calc(92px * var(--multiplier-1)) !important;
+        width: calc(92px * var(--multiplier-1)) !important;
+        bottom: calc(442px * var(--multiplier-1)) !important;
+        right: calc(64px * var(--multiplier-1)) !important;
     }
 
     .sprite-left-stars {
-        height: calc(131px * var(--multiplier-1));
-        width: calc(100px * var(--multiplier-1));
-        bottom: calc(511px * var(--multiplier-1));
-        left: calc(18px * var(--multiplier-1));
+        height: calc(131px * var(--multiplier-1)) !important;
+        width: calc(100px * var(--multiplier-1)) !important;
+        bottom: calc(511px * var(--multiplier-1)) !important;
+        left: calc(18px * var(--multiplier-1)) !important;
     }
 
     .sprite-right-stars {
-        height: calc(131px * var(--multiplier-1));
-        width: calc(150px * var(--multiplier-1));
-        top: calc(56px * var(--multiplier-1));
-        right: calc(21px * var(--multiplier-1));
+        height: calc(131px * var(--multiplier-1)) !important;
+        width: calc(150px * var(--multiplier-1)) !important;
+        top: calc(56px * var(--multiplier-1)) !important;
+        right: calc(21px * var(--multiplier-1)) !important;
     }
 
 }
 
 @media only screen and (min-width: 1280px) {
     .content-page {
-        width: 1200px;
-        margin: auto;
+        width: 1200px !important;
+        margin: auto !important;
     }
 
     .sprite-layer-1 {
-        height: calc(109px * var(--multiplier-1));
+        height: calc(109px * var(--multiplier-1)) !important;
     }
 
     .sprite-layer-2 {
-        height: calc(260px * var(--multiplier-1));
-        bottom: calc(0px * var(--multiplier-1));
+        height: calc(260px * var(--multiplier-1)) !important;
+        bottom: calc(0px * var(--multiplier-1)) !important;
     }
 
 
     .sprite-layer-3 {
-        height: calc(360px * var(--multiplier-1));
-        bottom: calc(181px * var(--multiplier-1));
+        height: calc(360px * var(--multiplier-1)) !important;
+        bottom: calc(181px * var(--multiplier-1)) !important;
     }
 
     .sprite-layer-4 {
-        height: calc(440px * var(--multiplier-1));
-        bottom: calc(280px * var(--multiplier-1));
-        background-size: 100% 100%;
+        height: calc(440px * var(--multiplier-1)) !important;
+        bottom: calc(280px * var(--multiplier-1)) !important;
+        background-size: 100% 100% !important;
     }
 
     .sprite-footprint {
-        height: calc(26px * var(--multiplier-1));
-        width: calc(26px * var(--multiplier-1));
-        bottom: calc(320px * var(--multiplier-1));
-        right: calc(275px * var(--multiplier-1));
+        height: calc(26px * var(--multiplier-1)) !important;
+        width: calc(26px * var(--multiplier-1)) !important;
+        bottom: calc(320px * var(--multiplier-1)) !important;
+        right: calc(275px * var(--multiplier-1)) !important;
     }
 
     .sprite-character {
-        height: calc(37px * var(--multiplier-1));
-        width: calc(37px * var(--multiplier-1));
-        bottom: calc(350px * var(--multiplier-1));
-        right: calc(255px * var(--multiplier-1));
+        height: calc(37px * var(--multiplier-1)) !important;
+        width: calc(37px * var(--multiplier-1)) !important;
+        bottom: calc(350px * var(--multiplier-1)) !important;
+        right: calc(255px * var(--multiplier-1)) !important;
     }
 
     .bg-sand-layer-1 {
-        background-size: 100% 100%;
-        height: calc(210px * var(--multiplier-1));
+        background-size: 100% 100% !important;
+        height: calc(210px * var(--multiplier-1)) !important;
     }
 
     .bg-sand-layer-2 {
-        background-size: 100% 100%;
-        height: calc(210px * var(--multiplier-1));
+        background-size: 100% 100% !important;
+        height: calc(210px * var(--multiplier-1)) !important;
     }
 
 }
 
 @media only screen and (min-width: 1440px) {
     .sprite-layer-1 {
-        height: calc(109px * var(--multiplier-1));
-        bottom: calc(-50px * var(--multiplier-1));
+        height: calc(109px * var(--multiplier-1)) !important;
+        bottom: calc(-50px * var(--multiplier-1)) !important;
     }
 
     .sprite-layer-2 {
-        height: calc(300px* var(--multiplier-1));
-        bottom: calc(-50px* var(--multiplier-1));
+        height: calc(300px* var(--multiplier-1)) !important;
+        bottom: calc(-50px* var(--multiplier-1)) !important;
     }
 }
