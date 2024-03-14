@@ -105,6 +105,12 @@ export default function QuestionsPage() {
 	}
 
 	const onClickDiscover = () => {
+		const hasActive = items.some((item: any) => item.active);
+		if (!hasActive) {
+			setIsQuestionSelected(false)
+			return
+		}
+
 		setIsQuestionSelected(true)
 		if (fn.localStorage.get('user_balance')) {
 			let user_balance = Number(fn.localStorage.get('user_balance'));
