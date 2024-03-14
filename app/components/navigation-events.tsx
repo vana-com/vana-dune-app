@@ -23,13 +23,17 @@ export function NavigationEvents() {
 				});
 
 				const data = await res.json();
-				if (data && data.error) {
+				if (data && data.error || data.error) {
 					router.push("/error")
 				} else {
 					if (data.status) {
 					} else {
 						if (data.isCharacter) {
 							router.push("/error")
+						} else {
+							if (!data.story || !data.tribe) {
+								router.push("/error")
+							}
 						}
 						// todo: when not enough balance, add action not to able to visit the result page with it.
 					}

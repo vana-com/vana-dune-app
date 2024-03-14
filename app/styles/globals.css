@@ -136,3 +136,7 @@
         opacity: 0.25;
     }
 }
+
+.list .no-selected {
+	border: 1px solid red !important;
+}
