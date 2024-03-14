@@ -8,6 +8,8 @@ import { CustomButton, Modal } from "./components";
 import { useSearchParams } from 'next/navigation';
 import { useCookies } from 'next-client-cookies';
 import { fn } from '../utils/fn';
+import { common } from "../utils/common";
+
 export function Nav(prop: any) {
 	const cookies = useCookies();
 
@@ -29,6 +31,8 @@ export function Nav(prop: any) {
 	const [showCoins, setShowCoins] = useState(false);
 
 	const [showModalCoin, setShowModalCoin] = useState(false);
+	const [showModalLowCoin, setShowModalLowCoin] = useState(false);
+
 	const [showModalAttention, setShowModalAttention] = useState(false);
 	const [showSessionError, setShowSessionError] = useState(false);
 	const [showAPIError, setShowAPIError] = useState(false);
@@ -86,11 +90,27 @@ export function Nav(prop: any) {
 
 
 	const handleShowCoins = () => {
-		setShowModalCoin(true);
+		console.log("coins", coins)
+		if (coins < 8) {
+			setShowModalLowCoin(true);
+		} else {
+			setShowModalCoin(true);
+		}
 	}
 
 	const closeModalCoin = () => {
 		setShowModalCoin(false);
+	}
+
+	const closeModalLowCoin = () => {
+		setShowModalLowCoin(false)
+	}
+
+	const onClickLowCoinOk = () => {
+		window.open(common.helpSupport, "_blank")
+		setTimeout(() => {
+			setShowModalLowCoin(false);
+		}, 100);
 	}
 
 	const onClickCoinOk = () => {
@@ -366,6 +386,29 @@ export function Nav(prop: any) {
 				</div>
 			</Modal>
 
+
+			<Modal
+				minH={''}
+				showModal={showModalLowCoin}
+				closeModal={closeModalLowCoin}>
+				<div className="modal-header text-center mb-[28px]">
+					<div className="font-brooklyn font-extrabold text-[20px] mb-[12px]">Uh-Oh, Not Enough Credit</div>
+				</div>
+
+				<div className="modal-body mb-[24px] font-brooklyn font-normal text-[16px] px-[5px]">
+					<p>{`You don’t have enough credit to generate your character. Please contact VANA support.`}</p>
+				</div>
+
+				<div className="modal-footer">
+					<CustomButton
+						height={`48px`}
+						boxShadow={`-7px`}
+						title={`Contact VANA Support`}
+						isActive={true}
+						onClicked={onClickLowCoinOk}
+					></CustomButton>
+				</div>
+			</Modal>
 		</div>
 	)
 }
