@@ -203,7 +203,6 @@ export default function QuestionsPage() {
 
 									</div>
 								</div>
-
 								{
 									isLastPage ?
 										<div className="flex items-center justify-center">
@@ -219,31 +218,50 @@ export default function QuestionsPage() {
 											></CustomButton>
 										</div>
 										:
-										<div className="block 4xs:flex 4xs:items-center">
 
-											<div className="4xs:flex-1 4xs:mr-[23px]">
-												<CustomButton
-													className="mr-2"
-													height={`54px`}
-													boxShadow={`-7px`}
-													title={`Previous`}
-													hasArrow={true}
-													arrowPos={`left`}
-													onClicked={onClickPrevious}
-												></CustomButton>
-											</div>
+										<div
+											className={`${currentQuestionPage == 1 ? 'flex items-center justify-center' : ''}`}>
+											{
+												currentQuestionPage == 1 ?
+													<CustomButton
+														width={`216px`}
+														height={`55px`}
+														boxShadow={`-7px`}
+														title={`Next`}
+														isActive={true}
+														hasArrow={true}
+														arrowPos={`right`}
+														onClicked={onClickNext}
+													></CustomButton>
+													:
 
-											<div className="mt-[10px] 4xs:mt-[0] 4xs:w-[130px] xs:w-[35%] sm:w-[40%] md:w-[45%]">
-												<CustomButton
-													height={`55px`}
-													boxShadow={`-7px`}
-													title={`Next`}
-													isActive={true}
-													hasArrow={true}
-													arrowPos={`right`}
-													onClicked={onClickNext}
-												></CustomButton>
-											</div>
+													<div className="block 4xs:flex 4xs:items-center">
+														<div className="4xs:flex-1 4xs:mr-[23px]">
+															<CustomButton
+																className="mr-2"
+																height={`54px`}
+																boxShadow={`-7px`}
+																title={`Previous`}
+																hasArrow={true}
+																arrowPos={`left`}
+																onClicked={onClickPrevious}
+															></CustomButton>
+														</div>
+
+														<div className="mt-[10px] 4xs:mt-[0] 4xs:w-[130px] xs:w-[35%] sm:w-[40%] md:w-[45%]">
+															<CustomButton
+																height={`55px`}
+																boxShadow={`-7px`}
+																title={`Next`}
+																isActive={true}
+																hasArrow={true}
+																arrowPos={`right`}
+																onClicked={onClickNext}
+															></CustomButton>
+														</div>
+													</div>
+											}
+
 										</div>
 								}
 
