@@ -96,7 +96,6 @@ export default function QuestionsPage() {
 	const onClickDiscover = () => {
 		if (fn.localStorage.get('user_balance')) {
 			let user_balance = Number(fn.localStorage.get('user_balance'));
-			console.log('user_balance', user_balance)
 			if (user_balance < 8) {
 				showCoins();
 				return
