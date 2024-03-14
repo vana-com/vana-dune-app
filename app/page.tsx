@@ -65,6 +65,8 @@ export default function LandingPage() {
 		cookies.remove('is-clicked-discover');
 		cookies.remove('is-prompt-generate');
 		cookies.remove('is-clicked-discover');
+		fn.localStorage.remove("prompt-error")
+		fn.localStorage.remove("user_balance")
 	}, [cookies])
 	return (
 		<>

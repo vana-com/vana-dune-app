@@ -24,19 +24,20 @@ export function NavigationEvents() {
 
 				const data = await res.json();
 				if (data && data.error || data.error) {
+					fn.localStorage.remove("prompt-error")
 					router.push("/error")
 				} else {
 					if (data.status) {
+						fn.localStorage.remove("prompt-error")
 					} else {
 						if (data.isCharacter) {
+							fn.localStorage.remove("prompt-error")
 							router.push("/error")
 						} else {
 							if (!data.story || !data.tribe) {
-								// todo: set local storage and add condition to the discover button
-								// router.push("/error")
+								fn.localStorage.set("prompt-error", "1")
 							}
 						}
-						// todo: when not enough balance, add action not to able to visit the result page with it.
 					}
 				}
 			} catch (error) {
@@ -52,7 +53,6 @@ export function NavigationEvents() {
 				}
 			} else {
 				if (!code) {
-					console.log("redirect to login")
 					router.push("/")
 				}
 			}

@@ -119,6 +119,7 @@ export default function QuestionsPage() {
 				return
 			}
 		}
+
 		cookies.set('is-clicked-discover', '1');
 		router.push("/loading");
 	}

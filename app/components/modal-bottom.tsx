@@ -19,7 +19,7 @@ export function ModalBottom(prop: any) {
 
 	const [fbUrl, setFbUrl] = useState("");
 	const [twitterUrl, setTwitterUrl] = useState("");
-	const [twitterTitle, setTwitterTitle] = useState("");
+	const [twitterTitle, setTwitterTitle] = useState("\n");
 
 	let user_id: any = null;
 	if (fn.localStorage.get('user_id')) user_id = fn.localStorage.get('user_id');
@@ -132,8 +132,9 @@ export function ModalBottom(prop: any) {
 
 					<div className="socMedia-item text-center">
 						<TwitterShareButton
+							url={twitterUrl}
 							title={twitterTitle}
-							url={twitterUrl}>
+							>
 							<div className="bg-[#A8DADC] socMedia-icon-box flex items-center justify-center rounded-[50%] mx-auto mb-[10px]">
 								<Image src={`/resources/socmed/twitter.svg`} alt="instragram-stories" width="40" height="40" />
 							</div>
