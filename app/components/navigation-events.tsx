@@ -13,6 +13,7 @@ export function NavigationEvents() {
 
 	useEffect(() => {
 		const reqGetPrompt = async () => {
+			console.log("test dev")
 			cookies.set('is-prompt-generate', '1');
 			try {
 				const res = await fetch('api/getPrompt', {
