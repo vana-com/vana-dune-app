@@ -40,6 +40,8 @@ export default function QuestionsPage() {
 
 	const [items, setItems] = useState<any>(answersArr[0]);
 
+	const [isQuestionSelected, setIsQuestionSelected] = useState<boolean>(true)
+
 	const alphabetsArr: Array<string> = ["A", "B", "C", "D"]
 
 	// declartion for functions
@@ -57,16 +59,18 @@ export default function QuestionsPage() {
 	};
 
 	const handleClickAnswer = (itemId: any, obj: any) => {
+		setIsQuestionSelected(true)
 		setItems(items.map((item: any, i: number) => {
 			if (i === itemId) {
 				return { ...item, active: !item.active }; // Toggle the active state
 			} else {
-				return item; // Keep other items unchanged
+				return { ...item, active: false }; // Keep other items unchanged
 			}
 		}));
 	};
 
 	const onClickPrevious = () => {
+		setIsQuestionSelected(true)
 		if (currentQuestionPage == 1) {
 			return
 		}
@@ -85,6 +89,13 @@ export default function QuestionsPage() {
 			return;
 		}
 
+		const hasActive = items.some((item: any) => item.active);
+		if (!hasActive) {
+			setIsQuestionSelected(false)
+			return
+		}
+
+		setIsQuestionSelected(true)
 		let newNumber = currentQuestionPage + 1;
 		setQuestionPage(newNumber);
 
@@ -94,6 +105,7 @@ export default function QuestionsPage() {
 	}
 
 	const onClickDiscover = () => {
+		setIsQuestionSelected(true)
 		if (fn.localStorage.get('user_balance')) {
 			let user_balance = Number(fn.localStorage.get('user_balance'));
 			if (user_balance < 8) {
@@ -188,7 +200,7 @@ export default function QuestionsPage() {
 												{data.map((item: any, index: number) => (
 													<Flipped key={item} flipId={item}>
 														<li
-															className={`font-brooklyn font-normal text-[12px] text-primary flex items-center p-[12px] border-solid border-[1px] border-[#373737] cursor-pointer ${styles.q_button_item} ${items[item].active ? styles.active : ''} ${items[item].active ? styles.pulse : ''}`}
+															className={`font-brooklyn font-normal text-[12px] text-primary flex items-center p-[12px] border-solid border-[1px] border-[#373737] cursor-pointer ${styles.q_button_item} ${items[item].active ? styles.active : ''} ${items[item].active ? styles.pulse : ''} ${!isQuestionSelected ? 'no-selected' : ''}`}
 															onClick={() => handleClickAnswer(item, items[item])}
 														>
 															<RadioButton active={items[item].active} title={alphabetsArr[index]} />
@@ -200,6 +212,16 @@ export default function QuestionsPage() {
 												))}
 											</ul>
 										</Flipper>
+										{
+											!isQuestionSelected ?
+
+												<div className="relative bottom-0 flex justify-center items-center font-brooklyn font-normal text-[14px] text-[red] mt-[10px]">
+													<span>Required answer, please select one.</span>
+												</div>
+												:
+
+												null
+										}
 
 									</div>
 								</div>
