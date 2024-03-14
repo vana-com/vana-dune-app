@@ -32,7 +32,8 @@ export function NavigationEvents() {
 							router.push("/error")
 						} else {
 							if (!data.story || !data.tribe) {
-								router.push("/error")
+								// todo: set local storage and add condition to the discover button
+								// router.push("/error")
 							}
 						}
 						// todo: when not enough balance, add action not to able to visit the result page with it.
