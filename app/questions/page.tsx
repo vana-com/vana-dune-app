@@ -120,11 +120,6 @@ export default function QuestionsPage() {
 			}
 		}
 
-		if (fn.localStorage.get("prompt-error") && fn.localStorage.get("prompt-error") == "1") {
-			router.push("/error");
-			fn.localStorage.remove("prompt-error")
-			return
-		}
 		cookies.set('is-clicked-discover', '1');
 		router.push("/loading");
 	}

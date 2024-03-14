@@ -82,6 +82,14 @@ export default function Result() {
 	}
 
 	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			if (fn.localStorage.get("prompt-error") && fn.localStorage.get("prompt-error") == "1") {
+				fn.localStorage.remove("prompt-error")
+				router.push("/error");
+				return
+			}
+		}
+
 		const getSavedPrompt = async (user_id: any = '') => {
 			if (!user_id) {
 				cookies.remove('is-prompt-generate');

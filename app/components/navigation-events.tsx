@@ -24,11 +24,14 @@ export function NavigationEvents() {
 
 				const data = await res.json();
 				if (data && data.error || data.error) {
+					fn.localStorage.remove("prompt-error")
 					router.push("/error")
 				} else {
 					if (data.status) {
+						fn.localStorage.remove("prompt-error")
 					} else {
 						if (data.isCharacter) {
+							fn.localStorage.remove("prompt-error")
 							router.push("/error")
 						} else {
 							if (!data.story || !data.tribe) {
