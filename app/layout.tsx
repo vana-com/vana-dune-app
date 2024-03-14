@@ -3,9 +3,8 @@ import type { Metadata } from "next";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-import "./styles/globals.css";
 import "./styles/media.css";
+import "./styles/globals.css";
 import "./styles/frameanimate.css";
 import "./styles/swiper.css";
 
