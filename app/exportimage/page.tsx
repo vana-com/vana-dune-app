@@ -120,7 +120,6 @@ export default function ExportImage() {
 						link.click();
 						document.body.removeChild(link);
 						setIsLoaded(true)
-
 						if (fn.checkBrowserType() == 'Firefox') {
 
 						} else {
@@ -137,8 +136,20 @@ export default function ExportImage() {
 
 					link.href = dataUrl;
 					link.click();
-					setIsLoaded(true)
-					window.close();
+
+					if (fn.checkBrowserType() == 'Firefox') {
+						setTimeout(() => {
+							setIsLoaded(true);
+							setTimeout(() => {
+								window.close();
+							}, 1000);
+						}, 2000);
+					} else {
+						setIsLoaded(true);
+						setTimeout(() => {
+							window.close();
+						}, 1000);
+					}
 				}
 			})
 			.catch((err) => {
