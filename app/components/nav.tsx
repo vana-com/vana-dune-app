@@ -26,9 +26,11 @@ export function Nav(prop: any) {
 
 
 	const [coins, setCoins] = useState(oldCoins);
-	const [coinDecuctValue, setCoinDeduct] = useState(8);
+	const [coinDecuctValue, setCoinDeduct] = useState(12);
 	const [showBack, setShowBack] = useState(false);
 	const [showCoins, setShowCoins] = useState(false);
+	const [isLoadingPage, setIsLoadingPage] = useState(false);
+
 
 	const [showModalCoin, setShowModalCoin] = useState(false);
 	const [showModalLowCoin, setShowModalLowCoin] = useState(false);
@@ -90,8 +92,8 @@ export function Nav(prop: any) {
 
 
 	const handleShowCoins = () => {
-		console.log("coins", coins)
-		if (coins < 8) {
+		// console.log("coins", coins)
+		if (coins < 12) {
 			setShowModalLowCoin(true);
 		} else {
 			setShowModalCoin(true);
@@ -133,7 +135,7 @@ export function Nav(prop: any) {
 	}
 
 	useEffect(() => {
-		// console.log(`Route changed to: ${pathname}`);
+		console.log(`Route changed to: ${pathname}`);
 
 		const code: any = searchParams.get('code');
 		const scope: any = searchParams.get('scope');
@@ -234,6 +236,12 @@ export function Nav(prop: any) {
 			}
 		}
 
+		if (pathname === '/loading') {
+			setIsLoadingPage(true);
+		} else {
+			setIsLoadingPage(false);
+		}
+
 		return () => {
 			clearInterval(interval);
 		}
@@ -266,7 +274,7 @@ export function Nav(prop: any) {
 	return (
 		<div className={`relative z-20 2xl:w-[1200px] 2xl:mx-auto`}>
 			<div className="flex justify-center items-center px-[16px] pt-[6px]">
-				{showBack ?
+				{showBack && !isLoadingPage ?
 					<div className="sm:left-[4rem] md:left-[6rem] lg:left-[8rem] xl:left-[10rem] absolute left-[16px] top-[10px] cursor-pointer" onClick={() => { goBack() }}>
 						<Image src={`/resources/arrow-left-default.svg`} alt="arrow-back" width="20" height="20" />
 					</div>
@@ -319,7 +327,12 @@ export function Nav(prop: any) {
 				minH={''}
 				showModal={showModalAttention}
 				closeModal={closeAttention}>
-				<div className="modal-header text-center mb-[28px]">
+				<Image
+					className="cursor-pointer absolute top-[-10px] right-[-5px]"
+					onClick={() => { closeAttention() }}
+					src={`/resources/exit.svg`} alt="exit" width="24" height="24" />
+
+				<div className="modal-header text-center mb-[28px] pt-[5px]">
 					<div className="font-brooklyn font-extrabold text-[20px] mb-[12px]">Attention!</div>
 				</div>
 

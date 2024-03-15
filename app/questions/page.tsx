@@ -114,7 +114,7 @@ export default function QuestionsPage() {
 		setIsQuestionSelected(true)
 		if (fn.localStorage.get('user_balance')) {
 			let user_balance = Number(fn.localStorage.get('user_balance'));
-			if (user_balance < 8) {
+			if (user_balance < 12) {
 				showCoins();
 				return
 			}
