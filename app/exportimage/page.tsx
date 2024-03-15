@@ -227,7 +227,7 @@ export default function ExportImage() {
 					<div className="relative z-[100] text-center flex justify-center items-center">
 
 						<div className="relative z-[20] p-[15px] sm:px-[4rem] md:px-[6rem] lg:px-[8rem] xl:px-[10rem] 2xl:w-[1200px] 2xl:mx-auto pt-[2rem]">
-							<div className="block min-[600px]:flex min-[600px]:items-end min-[600px]:justify-evenly mb-[15px] flex-wrap">
+							<div className="block">
 
 								<div className="flex justify-center items-center">
 									<div className="min-[600px]:mx-[unset] mb-[1rem] w-[266px] h-[266px] min-w-[266px] max-w-[266px] avatar relative 2xs:h-[266px] 2xs:w-[auto] rounded-[50%] border-solid border-[white] border-[2px] flex justify-center items-center">
@@ -268,7 +268,7 @@ export default function ExportImage() {
 
 							</div>
 
-							<div className="flex justify-center items-center">
+							<div className="flex justify-center items-center mt-[10px]">
 								<img className="" src={`/resources/line-breaker.png`} alt="line-breaker" width="91" height="18" />
 							</div>
 
