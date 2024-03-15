@@ -260,7 +260,7 @@ export default function Result() {
 						</div>
 
 						<div className="modal-body mb-[24px] font-brooklyn font-normal text-[16px] px-[5px]">
-							<p>Do you want to create a character again? 8 credits are taken out of your account each time a character is recreated.</p>
+							<p>Do you want to create a character again? 12 credits are taken out of your account each time a character is recreated.</p>
 						</div>
 
 						<div className="modal-footer">
