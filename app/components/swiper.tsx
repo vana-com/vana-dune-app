@@ -59,7 +59,7 @@ export function SwiperSlider(prop: any) {
 				// 	clickable: true,
 				// }}
 				modules={[
-					// Autoplay, // remove comment for auto play
+					Autoplay, // remove comment for auto play
 					EffectCoverflow,
 					// Pagination,
 					Navigation,
