@@ -135,7 +135,7 @@ export function Nav(prop: any) {
 	}
 
 	useEffect(() => {
-		console.log(`Route changed to: ${pathname}`);
+		// console.log(`Route changed to: ${pathname}`);
 
 		const code: any = searchParams.get('code');
 		const scope: any = searchParams.get('scope');
@@ -143,6 +143,7 @@ export function Nav(prop: any) {
 
 		const expiryDate: any = fn.getCookieExpiryDate(3);
 		let interval: any = null;
+		let promptInterval: any = null;
 
 		const reqOathToken = async () => {
 			try {
@@ -212,6 +213,13 @@ export function Nav(prop: any) {
 					interval = setInterval(() => {
 						reqGetBalance();
 					}, 15000)
+
+					promptInterval = setInterval(() => {
+						if (cookies.get('is-prompt-generate')) {
+							reqGetBalance();
+							clearInterval(promptInterval);
+						}
+					}, 1000)
 				} else {
 					// if not landing page dont show
 					if (pathname != '/') {
@@ -244,6 +252,7 @@ export function Nav(prop: any) {
 
 		return () => {
 			clearInterval(interval);
+			clearInterval(promptInterval);
 		}
 	}, [pathname, searchParams, router, cookies, hasAttentionURL, guestToken])
 

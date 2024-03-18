@@ -102,7 +102,7 @@ export function SwiperSlider(prop: any) {
 					<SwiperSlide key={index} >
 						<div className="swiper-mask fixed bottom-0 top-0 right-0 left-0"></div>
 
-						<div className="box-wrapper min-h-[300px]">
+						<div className="box-wrapper xs:min-h-[300px]">
 							<div className={`box-content`}>
 								<div className="avatar w-[210px] h-[210px] max-w-[286px] mx-auto avatar relative 2xs:h-[286px] 2xs:w-[auto] rounded-[50%] border-solid border-[white] border-[2px] flex justify-center items-center mt-[10px] mb-[24px]">
 									<Image priority={true} className="absolute top-0 right-0 bottom-0 left-0 h-[90%] w-[90%] m-auto 2xs:h-[250px] 2xs:w-[250px]" src={`/resources/bg/inner-border.svg`} alt="poster" width="300" height="300" />

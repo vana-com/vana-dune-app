@@ -106,8 +106,9 @@ const AvenyTWeb = localFont({
 	src: [
 		// default
 		{
-			path: '../../public/fonts/Aveny-T-WEB.woff2',
-			weight: '400',
+			// path: '../../public/fonts/Aveny-T-WEB.woff2',
+			path: '../../public/fonts/FontsFree-Net-Aveny-T-WEB.ttf',
+			weight: '500',
 			style: 'normal',
 		},
 	],

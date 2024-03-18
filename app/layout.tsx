@@ -72,8 +72,8 @@ export default function RootLayout({
 	const tailwindClasses = `font-normal min-h-[100vh]`;
 
 	return (
-		<html lang="en">
-			<body className={`${fontVariables} ${tailwindClasses}`}>
+		<html lang="en" className={`${fontVariables} ${tailwindClasses}`}>
+			<body>
 				<CookiesProvider>
 					{children}
 

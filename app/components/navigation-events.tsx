@@ -24,8 +24,9 @@ export function NavigationEvents() {
 
 				const data = await res.json();
 				if (data && data.error || data.error) {
-					fn.localStorage.remove("prompt-error")
-					router.push("/error")
+					fn.localStorage.set("prompt-error", "1")
+					// fn.localStorage.remove("prompt-error")
+					// router.push("/error")
 				} else {
 					if (data.status) {
 						fn.localStorage.remove("prompt-error")

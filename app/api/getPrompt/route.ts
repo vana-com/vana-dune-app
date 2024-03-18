@@ -6,18 +6,30 @@ import { data } from ".."
 import { api } from "../api"
 export async function GET() {
 
-	// // when fail
-	// let data: any = {
-	// 	"status": false,
-	// 	"isCharacterError": true,
-	// 	message: "HTTP request returned status code 404:\n{\"statusCode\":404,\"name\":\"ModelNotFoundException\",\"message\":\"Character 9667bf0b-061d-4816-9dd5-a8c40a848747 does not hav (truncated...)\n",
-	// };
-
-	// return NextResponse.json(data)
-
-
+	// // start test
 	// const delay = (ms: any) => new Promise(res => setTimeout(res, ms));
-	// await delay(process.env.NEXT_PUBLIC_LOADING_TIME)
+	// await delay(5000)
+
+	// // when fail
+	// // let data: any = {
+	// // 	"status": false,
+	// // 	"isCharacter": true,
+	// // 	"message": "HTTP request returned status code 404:\n{\"statusCode\":404,\"name\":\"ModelNotFoundException\",\"message\":\"Character 9667bf0b-061d-4816-9dd5-a8c40a848747 does not hav (truncated...)\n",
+	// // };
+
+
+	// // let data: any = {
+	// // 	"status": false,
+	// // 	"message": "HTTP request returned status code 500:\n{\"name\":\"Error\",\"message\":\"@vercel/edge-config: Edge Config not found\",\"errors\":[\"@vercel/edge-config: Edge Config not f (truncated...)\n"
+	// // }
+
+	// // let data: any = {
+	// // 	"error": {
+	// // 		"status": 0,
+	// // 		"statusText": "Error requesting https://backend.beta.sandsofarrakis.me/api/users/generate-prompt"
+	// // 	}
+	// // }
+
 	// let data: any = {
 	// 	"status": true,
 	// 	"story": "You're a Fremen, I'll name you \"Kuya Mara\". Like the Fremen, you're skilled in survival, thriving in life's harshest conditions. Your love for your family mirrors their strong community bonds, and your curiosity parallels their keen sense of awareness in the vast desert of life.",
@@ -27,6 +39,7 @@ export async function GET() {
 	// };
 
 	// return NextResponse.json(data)
+	// // end test
 
 	const cookieStore = cookies()
 	const url = `${data.api_url}${api.getPrompt}`;
