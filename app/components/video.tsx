@@ -15,7 +15,9 @@ export function Video(props: any) {
 	return (
 		<div className="overflow-hidden rounded-[6px] min-h-[167px] flex items-center">
 			{/* used this one to solve the autoplay on ios chrome */}
-			<video autoPlay muted playsInline loop width="auto" height="auto">
+			<video autoPlay muted playsInline loop width="auto" height="auto" style={{
+				"borderRadius": "6px"
+			}}>
 				<source src={videoUrl} type="video/mp4" />
 			</video>
 

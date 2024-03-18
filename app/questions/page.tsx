@@ -234,17 +234,33 @@ export default function QuestionsPage() {
 								</div>
 								{
 									isLastPage ?
-										<div className="flex items-center justify-center">
-											<CustomButton
-												width={`216px`}
-												height={`55px`}
-												boxShadow={`-7px`}
-												title={`Discover Now`}
-												isActive={true}
-												hasArrow={true}
-												arrowPos={`right`}
-												onClicked={onClickDiscover}
-											></CustomButton>
+										<div className="block 2xs:flex 2xs:items-center">
+											{/* <div className="block 4xs:flex 4xs:items-center"> */}
+											<div className="2xs:flex-1 2xs:mr-[23px]">
+												<CustomButton
+													className="mr-2"
+													height={`54px`}
+													boxShadow={`-7px`}
+													title={`Previous`}
+													hasArrow={true}
+													arrowPos={`left`}
+													onClicked={onClickPrevious}
+												></CustomButton>
+											</div>
+
+											<div className="mt-[10px] min-w-[190px] 2xs:mt-[0] 2xs:flex-1 xs:w-[35%] sm:w-[40%] md:w-[45%]">
+												<CustomButton
+													height={`55px`}
+													boxShadow={`-7px`}
+													title={`Discover Now`}
+													isActive={true}
+													hasArrow={true}
+													arrowPos={`right`}
+													onClicked={onClickDiscover}
+												></CustomButton>
+
+											</div>
+											{/* </div> */}
 										</div>
 										:
 
