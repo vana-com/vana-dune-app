@@ -15,11 +15,11 @@ import Image from 'next/image';
 export default function QuestionsLayout({ children }: Props) {
 	return (
 		<>
-			<div className="questions-layout h-full">
+			<div className="bg-default questions-layout h-full">
 				<div className="relative z-10 h-full">
 					{children}
 				</div>
-				<div className="bg-wrapper bg-default absolute top-0 right-0 bottom-0 left-0">
+				<div className="bg-wrapper absolute top-0 right-0 bottom-0 left-0">
 
 					<div
 						style={{

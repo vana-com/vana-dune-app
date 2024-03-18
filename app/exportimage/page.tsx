@@ -26,6 +26,7 @@ export default function ExportImage() {
 	const [resultData, setResultData] = useState<any>(null);
 	const [avatar, setAvatar] = useState<any>("")
 	const [isMobile, setIsMobile] = useState<boolean>(false)
+	const [qoute, setQoute] = useState<any>("")
 
 	const [isLoaded, setIsLoaded] = useState<boolean>(false)
 	const [dataUrl, setDataUrl] = useState<any>(null)
@@ -182,6 +183,7 @@ export default function ExportImage() {
 					if (data.status) {
 						setResultData(data)
 						setAvatar(data.image);
+						setQoute(fn.sanitizeText(data.quote))
 					} else {
 
 					}
@@ -218,7 +220,7 @@ export default function ExportImage() {
 
 			{
 				dataUrl ?
-					<div className={` fixed top-0 right-0 bottom-0 left-0 z-[9999] backdrop-blur-sm overflow-y-auto`} >
+					<div className={`fixed top-0 right-0 bottom-0 left-0 z-[9999] backdrop-blur-sm overflow-y-auto`} >
 						<div className="w-[100%] h-[100%] flex justify-center items-center">
 							<img
 								style={{
@@ -241,10 +243,10 @@ export default function ExportImage() {
 							<div className="block">
 
 								<div className="flex justify-center items-center">
-									<div className="min-[600px]:mx-[unset] mb-[1rem] w-[266px] h-[266px] min-w-[266px] max-w-[266px] avatar relative 2xs:h-[266px] 2xs:w-[auto] rounded-[50%] border-solid border-[white] border-[2px] flex justify-center items-center">
-										<Image priority={true} className="absolute top-0 right-0 bottom-0 left-0 h-[90%] w-[90%] m-auto 2xs:h-[234px] 2xs:w-[234px]" src={`/resources/bg/inner-border.svg`} alt="poster" width="234" height="234" />
+									<div className="min-[600px]:mx-[unset] mb-[1rem] w-[277px] h-[277px] min-w-[277px] max-w-[277px] avatar relative 2xs:h-[277px] 2xs:w-[auto] rounded-[50%] border-solid border-[white] border-[2px] flex justify-center items-center">
+										<Image priority={true} className="absolute top-0 right-0 bottom-0 left-0 h-[90%] w-[90%] m-auto 2xs:h-[245px] 2xs:w-[245px]" src={`/resources/bg/inner-border.svg`} alt="poster" width="234" height="234" />
 
-										<div className="rounded-[50%] h-[75%] w-[75%] m-auto 2xs:h-[180px] 2xs:w-[180px] object-cover">
+										<div className="rounded-[50%] h-[75%] w-[75%] m-auto 2xs:h-[192px] 2xs:w-[192px] object-cover">
 
 											<img
 												onLoad={() => {
@@ -268,7 +270,7 @@ export default function ExportImage() {
 										style={{
 											textShadow: '-6px 0px 0px rgba(242, 77, 77, 1)'
 										}}
-										className="min-h-[80px] font-mona-sans-extra-bold text-primary-4 text-[50px] leading-[50px] xs:text-[80px] xs:leading-[80px] sm:text-[109px] sm:leading-[109px] font-extrabold text-center  md:pt-[2rem]">
+										className="min-h-[80px] font-mona-sans-extra-bold text-primary-4 text-[50px] leading-[50px] xs:text-[70px] xs:leading-[70px] sm:text-[80px] sm:leading-[80px] font-extrabold text-center  md:pt-[2rem]">
 										{
 											resultData ?
 												<p>{resultData.tribe}</p>
@@ -290,7 +292,7 @@ export default function ExportImage() {
 								<p className="block px-[5px]">
 									{
 										resultData ?
-											resultData.quote : ''}
+											qoute : ''}
 								</p>
 							</div>
 
@@ -313,11 +315,11 @@ export default function ExportImage() {
 
 								<div className="mt-[1.75rem]">
 									<div>
-										<p className="mb-[1rem] font-mona-sans-bold text-[22px] sm:text-[32px]">TAP LINK TO SEE MORE</p>
+										<p className="mb-[1rem] font-mona-sans-bold text-[20px] sm:text-[26px]">TAP LINK TO SEE MORE</p>
 									</div>
 
 									<div className="flex items-center justify-center">
-										<div className="font-aveny font-normal flex items-center bg-white rounded-[5px] text-[#262626] text-[24px] leading-[24px] sm:text-[40px] sm:leading-[40px] p-[8px]">
+										<div className="font-aveny font-normal flex items-center bg-white rounded-[5px] text-[#262626] text-[20px] leading-[22px] sm:text-[35px] sm:leading-[35px] p-[8px]">
 											<img
 												className="mr-[5px]"
 												src={`/resources/link.svg`} alt="link" width="24" height="24" />

@@ -108,34 +108,35 @@ export default function Loading() {
 					</div>
 
 
-					<div className="content-page px-[16px] sm:px-[4rem] md:px-[6rem] lg:px-[8rem] xl:px-[10rem]">
+					<div className="content-page px-[16px] sm:px-[4rem] md:px-[6rem] lg:px-[8rem] xl:px-[10rem] pb-[100px]">
 						<div
 							style={{
-								textShadow: '-2px 0px 0px rgba(242, 77, 77, 1)',
-								letterSpacing: '1px'
+								textShadow: '-2.5px 0px 0px rgba(242, 77, 77, 1)',
+								letterSpacing: '1.75px'
 							}}
-							className={`font-mona-sans-extra-bold text-primary-4 text-[24px] font-extrabold text-center leading-[24px] ${isChanged ? 'opacity-[0.7]' : ''}`}>
+							className={`font-mona-sans-extra-bold font-extrabold text-primary-4 text-[24px] text-center leading-[24px] ${isChanged ? 'opacity-[0.7]' : ''}`}>
 							{slides[itemIndex].name}
 						</div>
 
 						<div className={`font-brooklyn font-semibold text-[16px] text-primary-1 mt-[16px] ${isChanged ? 'opacity-[0.7]' : ''} lg:px-[8rem]`}>
 							{slides[itemIndex].desc}
 						</div>
+
+						<div className="custom-pagination flex items-center justify-center mt-[20px]">
+							{
+								slides.map((item: any, index: number) => (
+									<div
+										onClick={() => {
+											setItemIndex(index)
+										}}
+										key={index}
+										className={`${itemIndex == index ? 'swiper-pagination-bullet-active' : ''} swiper-pagination-bullet`}>
+									</div>
+								))
+							}
+						</div>
 					</div>
 
-					<div className="custom-pagination flex items-center justify-center mt-[10px]">
-						{
-							slides.map((item: any, index: number) => (
-								<div
-									onClick={() => {
-										setItemIndex(index)
-									}}
-									key={index}
-									className={`${itemIndex == index ? 'swiper-pagination-bullet-active' : ''} swiper-pagination-bullet`}>
-								</div>
-							))
-						}
-					</div>
 				</div>
 
 			</div>
