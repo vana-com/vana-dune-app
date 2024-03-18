@@ -6,19 +6,19 @@ import { data } from ".."
 import { api } from "../api"
 export async function GET() {
 
+	let data: any = {
+		"status": true,
+		"balance": 126,
+	};
+
 	// let data: any = {
-	// 	"status": true,
-	// 	"balance": 126,
+	// 	"error": {
+	// 		"status": 0,
+	// 		"statusText": "Error requesting https://backend.beta.sandsofarrakis.me/api/users/balance"
+	// 	}
 	// };
 
-	// // let data: any = {
-	// // 	"error": {
-	// // 		"status": 0,
-	// // 		"statusText": "Error requesting https://backend.beta.sandsofarrakis.me/api/users/balance"
-	// // 	}
-	// // };
-
-	// return NextResponse.json(data)
+	return NextResponse.json(data)
 	const cookieStore = cookies()
 	const url = `${data.api_url}${api.getBalance}`;
 
