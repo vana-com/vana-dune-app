@@ -235,8 +235,7 @@ export default function QuestionsPage() {
 								{
 									isLastPage ?
 										<div className="block 2xs:flex 2xs:items-center">
-											{/* <div className="block 4xs:flex 4xs:items-center"> */}
-											<div className="2xs:flex-1 2xs:mr-[23px]">
+											<div className="2xs:mr-[8px] xs:flex-1 xs:mr-[23px]">
 												<CustomButton
 													className="mr-2"
 													height={`54px`}
@@ -260,7 +259,6 @@ export default function QuestionsPage() {
 												></CustomButton>
 
 											</div>
-											{/* </div> */}
 										</div>
 										:
 

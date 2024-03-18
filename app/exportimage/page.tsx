@@ -185,7 +185,7 @@ export default function ExportImage() {
 						setAvatar(data.image);
 						setQoute(fn.sanitizeText(data.quote))
 					} else {
-
+						router.replace("/error")
 					}
 				}
 			} catch (error) {
@@ -268,12 +268,17 @@ export default function ExportImage() {
 								<div>
 									<div
 										style={{
-											textShadow: '-6px 0px 0px rgba(242, 77, 77, 1)'
+											textShadow: '-5px 0px 0px rgba(242, 77, 77, 1)'
 										}}
-										className="min-h-[80px] font-mona-sans-extra-bold text-primary-4 text-[50px] leading-[50px] xs:text-[70px] xs:leading-[70px] sm:text-[80px] sm:leading-[80px] font-extrabold text-center  md:pt-[2rem]">
+										className="2xs:min-h-[80px] font-mona-sans-extra-bold text-primary-4 text-[30px] leading-[30px] 2xs:text-[35px] 2xs:leading-[35px] xs:text-[50px] xs:leading-[50px] sm:text-[60px] sm:leading-[60px] font-extrabold text-center  md:pt-[2rem]">
 										{
 											resultData ?
-												<p>{resultData.tribe}</p>
+												<p
+													style={{
+														letterSpacing: "3px",
+														textTransform: "uppercase"
+													}}
+												>{resultData.tribe}</p>
 												: null
 										}
 									</div>
@@ -287,9 +292,9 @@ export default function ExportImage() {
 
 							<div className="relative font-mona-sans-bold font-bold text-[#A62C39] text-center text-[14px] sm:text-[20px] indent-[10px] px-[5px] pt-[20px] mb-[24px]">
 								<Image
-									className="absolute top-0 left-0 4xs:left-[2rem] sm:left-[6rem] md:left-[8rem] lg:left-[10rem]"
+									className="absolute top-0 left-0 4xs:left-[1.75rem] sm:left-[6rem] md:left-[8rem] lg:left-[10rem]"
 									src={`/resources/quote.svg`} alt="qoute" width="56" height="56" />
-								<p className="block px-[5px]">
+								<p className="block px-[5px] font-mona-sans-bold text-[16px]">
 									{
 										resultData ?
 											qoute : ''}
@@ -297,15 +302,22 @@ export default function ExportImage() {
 							</div>
 
 							<div
+								style={{
+									backgroundColor: "rgba(255, 255, 255, 0.75)"
+								}}
 								className="content-data px-[12px] pt-[12px] pb-[24px]">
 
-								<div className="mt-[10px] xs:px-[2rem] md:px-[4rem] md:pt-[1.5rem] md:pb-[2rem] lg:px-[8rem] xl:px-[6rem]">
+								<div className="mt-[5px] xs:px-[2rem] md:px-[4rem] md:pt-[1.5rem] md:pb-[2rem] lg:px-[8rem] xl:px-[6rem]">
 
-									<div className="font-brooklyn font-semibold text-[14px] text-primary-6 text-left sm:text-[16px]">
+									<div className="font-brooklyn font-semibold text-[14px] text-primary-6 text-left sm:text-[14px]">
 
 										{
 											resultData ?
-												<p className="line-clamp-[7] min-[600px]:line-clamp-[12]">{resultData.story}</p>
+												<p
+													style={{
+														letterSpacing: "0.75px"
+													}}
+													className="line-clamp-[7] min-[600px]:line-clamp-[12]">{resultData.story}</p>
 												: null
 										}
 
@@ -315,15 +327,15 @@ export default function ExportImage() {
 
 								<div className="mt-[1.75rem]">
 									<div>
-										<p className="mb-[1rem] font-mona-sans-bold text-[20px] sm:text-[26px]">TAP LINK TO SEE MORE</p>
+										<p className="font-mona-sans-bold text-[20px] sm:text-[24px] text-[#262626]">TAP LINK TO SEE MORE</p>
 									</div>
 
-									<div className="flex items-center justify-center">
-										<div className="font-aveny font-normal flex items-center bg-white rounded-[5px] text-[#262626] text-[20px] leading-[22px] sm:text-[35px] sm:leading-[35px] p-[8px]">
+									<div className="mt-[1.25rem] flex items-center justify-center">
+										<div className="font-aveny font-normal flex items-center bg-white rounded-[5px] text-[#262626] text-[26px] leading-[26px] sm:text-[35px] sm:leading-[35px] p-[8px]">
 											<img
 												className="mr-[5px]"
 												src={`/resources/link.svg`} alt="link" width="24" height="24" />
-											<p>{`SANDSOFARRAKIS.ME`}</p>
+											<p className="leading-[26px]">{`SANDSOFARRAKIS.ME`}</p>
 										</div>
 									</div>
 								</div>

@@ -81,7 +81,11 @@ export default function Loading() {
 
 	return (
 		<>
-			<div className="bg-default min-h-[100vh]">
+			<div 
+				style={{
+					"backgroundImage": "linear-gradient(185deg, #C6918B, #F6D3B9)"
+				}}
+				className="min-h-[100vh]">
 				<Nav></Nav>
 
 				{/* content-page  */}
@@ -103,7 +107,7 @@ export default function Loading() {
 						</div>
 					</div>
 
-					<div className="min-h-[310px]">
+					<div className="xs:min-h-[310px]">
 						<SwiperSlider currentActiveIndex={itemIndex} slides={slides} changeIndex={changeIndex}></SwiperSlider>
 					</div>
 
@@ -112,13 +116,17 @@ export default function Loading() {
 						<div
 							style={{
 								textShadow: '-2.5px 0px 0px rgba(242, 77, 77, 1)',
-								letterSpacing: '1.75px'
+								letterSpacing: '1.95px'
 							}}
-							className={`font-mona-sans-extra-bold font-extrabold text-primary-4 text-[24px] text-center leading-[24px] ${isChanged ? 'opacity-[0.7]' : ''}`}>
+							className={`font-mona-sans-extra-bold font-extrabold text-primary-4 text-[25px] text-center leading-[24px] ${isChanged ? 'opacity-[0.7]' : ''}`}>
 							{slides[itemIndex].name}
 						</div>
 
-						<div className={`font-brooklyn font-semibold text-[16px] text-primary-1 mt-[16px] ${isChanged ? 'opacity-[0.7]' : ''} lg:px-[8rem]`}>
+						<div 
+							style={{
+								letterSpacing: '0.50px'
+							}}
+							className={`font-brooklyn font-semibold text-[16px] leading-[26px] text-[#373737] mt-[16px] ${isChanged ? 'opacity-[0.7]' : ''} lg:px-[8rem]`}>
 							{slides[itemIndex].desc}
 						</div>
 

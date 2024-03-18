@@ -6,13 +6,16 @@ import { data } from ".."
 import { api } from "../api"
 
 export async function POST(req: NextRequest, res: NextResponse) {
-	let data: any = {
-		"status": true,
-		"access_token": "ory_at_W9N-8ZiBOK0f_uXy7vSeK0H2eeDqNzjC743TmycVYVs.2VgwGPHhpFHZE5bEWftNCvywk_lprU5AvO7H3IH2EBw",
-		"user_id": "123456"
-	};
 
-	return NextResponse.json(data)
+	// // start test
+	// let data: any = {
+	// 	"status": true,
+	// 	"access_token": "ory_at_W9N-8ZiBOK0f_uXy7vSeK0H2eeDqNzjC743TmycVYVs.2VgwGPHhpFHZE5bEWftNCvywk_lprU5AvO7H3IH2EBw",
+	// 	"user_id": "123456"
+	// };
+
+	// return NextResponse.json(data)
+	// // end test
 
 	const cookieStore = cookies()
 	const url = `${data.api_url}${api.getOathToken}`;
