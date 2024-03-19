@@ -5,7 +5,6 @@ import localFont from "next/font/local";
  * Link: https://github.com/github/mona-sans/tree/v1.0.1
  * Link for font weights: https://tailwindcss.com/docs/font-weight
  */
-
 const monaSans = localFont({
 	src: [
 		// default
@@ -15,7 +14,9 @@ const monaSans = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-mona-sans'
+	variable: '--font-mona-sans',
+	display: 'swap',
+	preload: false,
 })
 
 const brooklyn = localFont({
@@ -27,7 +28,9 @@ const brooklyn = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-brooklyn'
+	variable: '--font-brooklyn',
+	display: 'swap',
+	preload: false,
 })
 
 const duneRise = localFont({
@@ -39,7 +42,9 @@ const duneRise = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-dune-rise'
+	variable: '--font-dune-rise',
+	display: 'swap',
+	preload: false,
 })
 
 const MonaSanExp_Regular = localFont({
@@ -51,7 +56,9 @@ const MonaSanExp_Regular = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-mona-sans-regular'
+	variable: '--font-mona-sans-regular',
+	display: 'swap',
+	preload: false,
 })
 
 const MonaSanExp_Medium = localFont({
@@ -63,7 +70,9 @@ const MonaSanExp_Medium = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-mona-sans-medium'
+	variable: '--font-mona-sans-medium',
+	display: 'swap',
+	preload: false,
 })
 
 const MonaSanExp_SemiBold = localFont({
@@ -75,7 +84,9 @@ const MonaSanExp_SemiBold = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-mona-sans-semibold'
+	variable: '--font-mona-sans-semibold',
+	display: 'swap',
+	preload: false,
 })
 
 const MonaSanExp_Bold = localFont({
@@ -87,7 +98,9 @@ const MonaSanExp_Bold = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-mona-sans-bold'
+	variable: '--font-mona-sans-bold',
+	display: 'swap',
+	preload: false,
 })
 
 const MonaSanExp_ExtraBold = localFont({
@@ -99,7 +112,9 @@ const MonaSanExp_ExtraBold = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-mona-sans-extra-bold'
+	variable: '--font-mona-sans-extra-bold',
+	display: 'swap',
+	preload: false,
 })
 
 const AvenyTWeb = localFont({
@@ -112,7 +127,9 @@ const AvenyTWeb = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-aveny-t-web'
+	variable: '--font-aveny-t-web',
+	display: 'swap',
+	preload: false,
 })
 
 export {
