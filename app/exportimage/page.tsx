@@ -126,6 +126,7 @@ export default function ExportImage() {
 						} else {
 							setTimeout(() => {
 								window.close();
+								fn.localStorage.set("download-success", "1")
 							}, 1000);
 						}
 					}
@@ -142,12 +143,14 @@ export default function ExportImage() {
 						setTimeout(() => {
 							setIsLoaded(true);
 							setTimeout(() => {
+								fn.localStorage.set("download-success", "1")
 								window.close();
 							}, 1000);
 						}, 2000);
 					} else {
 						setIsLoaded(true);
 						setTimeout(() => {
+							fn.localStorage.set("download-success", "1")
 							window.close();
 						}, 1000);
 					}
@@ -155,6 +158,8 @@ export default function ExportImage() {
 			})
 			.catch((err) => {
 				console.log(err);
+				fn.localStorage.set("download-success", "0")
+				window.close();
 			});
 	};
 

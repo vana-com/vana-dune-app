@@ -10,6 +10,7 @@ import {
 	FacebookShareButton,
 	TwitterShareButton,
 } from "react-share";
+import { CustomButton, Modal } from "./components";
 
 export function ModalBottom(prop: any) {
 	const { children, showModal, closeModal, confirmModal, minH } = prop;
@@ -20,9 +21,17 @@ export function ModalBottom(prop: any) {
 	const [fbUrl, setFbUrl] = useState("");
 	const [twitterUrl, setTwitterUrl] = useState("");
 	const [twitterTitle, setTwitterTitle] = useState("\n");
+	const [showSuccessSaved, setShowSuccessSaved] = useState(false);
+	const [isSuccessDownload, setIsSuccessDownload] = useState(false);
+	const [isMobile, setIsMobile] = useState<boolean>(false)
 
+	let saveImageInterval: any = null
 	let user_id: any = null;
 	if (fn.localStorage.get('user_id')) user_id = fn.localStorage.get('user_id');
+
+	const closeSucessSaved = () => {
+		setShowSuccessSaved(false);
+	};
 
 	const openModal = () => {
 		setOpen(true);
@@ -31,6 +40,7 @@ export function ModalBottom(prop: any) {
 	const handleCloseModal = () => {
 		setOpen(false);
 		closeModal(false);
+		clearInterval(saveImageInterval)
 	};
 
 	const handleConfirmModal = () => {
@@ -38,24 +48,51 @@ export function ModalBottom(prop: any) {
 		confirmModal();
 	};
 
-	const socialShare = () => {
-		// if (navigator) {
-		// 	let url: string = process.env.NEXT_PUBLIC_BASE_URL + '/result' ?? window.location.href;
+	const openSaveImage = () => {
+		if (isMobile || fn.getMobileOperatingSystem() == 'iOS') {
+			if (fn.getMobileOperatingSystem() == 'iOS') {
+				clearInterval(saveImageInterval)
+				return
+			} else {
+				if (fn.checkBrowserType() == 'Firefox') {
+					clearInterval(saveImageInterval)
+					return
+				} else {
 
-		// 	navigator.share({
-		// 		title: 'test',
-		// 		text: '123',
-		// 		url: url
-		// 	}).then((res) => {
-		// 		console.log("res", res)
+				}
+			}
+		} else {
+			// if (fn.checkBrowserType() == 'Firefox') {
 
-		// 	}).catch((err) => {
-		// 		console.error("err", err)
-		// 	})
-		// }
+			// } else {
+
+			// }
+		}
+
+		setTimeout(() => {
+			saveImageInterval = setInterval(() => {
+				if (fn.localStorage.get("download-success")) {
+					if (fn.localStorage.get("download-success") == "1") {
+						setIsSuccessDownload(true)
+					} else {
+						setIsSuccessDownload(false)
+					}
+					fn.localStorage.remove("download-success")
+					setShowSuccessSaved(true);
+					clearInterval(saveImageInterval)
+					console.log("download complete")
+				} else {
+					console.log("download in-progress")
+				}
+			}, 500)
+			console.log("openSaveImage")
+		}, 1000);
 	}
 
 	useEffect(() => {
+		setIsMobile(fn.isMobile())
+		fn.localStorage.remove("download-success")
+
 		setOpen(showModal);
 		if (typeof window !== 'undefined') {
 			let user_id: any = fn.localStorage.get('user_id');
@@ -72,7 +109,10 @@ export function ModalBottom(prop: any) {
 	}, [showModal]);
 
 	useEffect(() => {
-	}, [windowUrl])
+		return () => {
+			clearInterval(saveImageInterval)
+		}
+	}, [saveImageInterval])
 
 	return (
 		<>
@@ -88,7 +128,9 @@ export function ModalBottom(prop: any) {
 				<div className="socMedia-list font-brooklyn font-semibold text-[10px] flex items-center flex-wrap md:px-[6rem] lg:px-[8rem] xl:px-[10rem] 2xl:w-[1200px] 2xl:mx-auto">
 
 					<div className="socMedia-item text-center">
-						<Link href="/exportimage?saveImage=1" target="_blank">
+						<Link href="/exportimage?saveImage=1" target="_blank" onClick={() => {
+							openSaveImage();
+						}}>
 							<div className="bg-[#A8DADC] socMedia-icon-box flex items-center justify-center rounded-[50%] mx-auto mb-[10px]">
 								<Image src={`/resources/socmed/download.svg`} alt="download" width="24" height="24" />
 							</div>
@@ -134,7 +176,7 @@ export function ModalBottom(prop: any) {
 						<TwitterShareButton
 							url={twitterUrl}
 							title={twitterTitle}
-							>
+						>
 							<div className="bg-[#A8DADC] socMedia-icon-box flex items-center justify-center rounded-[50%] mx-auto mb-[10px]">
 								<Image src={`/resources/socmed/twitter.svg`} alt="instragram-stories" width="40" height="40" />
 							</div>
@@ -153,6 +195,28 @@ export function ModalBottom(prop: any) {
 
 				</div>
 			</div>
+
+			<Modal
+				showModal={showSuccessSaved}
+				closeModal={closeSucessSaved}>
+				<div className="modal-header text-center mb-[28px]">
+					<div className="font-brooklyn font-extrabold text-[20px] mb-[12px]">Save Image</div>
+				</div>
+
+				<div className="modal-body mb-[24px] font-brooklyn font-normal text-[16px] px-[5px]">
+					<p>{!isSuccessDownload ? `Image download failed. Retry again.` : `Image has been saved.`}</p>
+				</div>
+
+				<div className="modal-footer">
+					<CustomButton
+						height={`48px`}
+						boxShadow={`-7px`}
+						title={`Okay`}
+						isActive={true}
+						onClicked={closeSucessSaved}
+					></CustomButton>
+				</div>
+			</Modal>
 		</>
 	)
 }

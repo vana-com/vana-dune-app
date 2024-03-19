@@ -215,12 +215,16 @@ export function Nav(prop: any) {
 						reqGetBalance();
 					}, 15000)
 
-					promptInterval = setInterval(() => {
-						if (cookies.get('_is-prompt-generate')) {
-							reqGetBalance();
-							clearInterval(promptInterval);
-						}
-					}, 1000)
+					if (pathname === '/questions') {
+						promptInterval = setInterval(() => {
+							if (cookies.get('_is-prompt-generate')) {
+								reqGetBalance();
+								clearInterval(promptInterval);
+							}
+						}, 2500)
+					} else {
+						clearInterval(promptInterval);
+					}
 				} else {
 					// if not landing page dont show
 					if (pathname != '/') {
