@@ -13,7 +13,8 @@ export function NavigationEvents() {
 
 	useEffect(() => {
 		const reqGetPrompt = async () => {
-			cookies.set('is-prompt-generate', '1');
+			const expiryDate: any = fn.getCookieExpiryDate(3);
+			document.cookie = `_is-prompt-generate=true;expires=${expiryDate};path=/;SameSite=None;Secure`;
 			try {
 				const res = await fetch('api/getPrompt', {
 					headers: {
@@ -48,7 +49,7 @@ export function NavigationEvents() {
 
 		if (['/questions'].includes(pathname)) {
 			const code = searchParams.get('code');
-			if (cookies.get('_token') && !cookies.get('is-prompt-generate')) {
+			if (cookies.get('_token') && !cookies.get('_is-prompt-generate')) {
 				if (!code) {
 					reqGetPrompt();
 				}
@@ -60,12 +61,12 @@ export function NavigationEvents() {
 		}
 
 		if (['/result'].includes(pathname)) {
-			if (cookies.get('is-prompt-generate')) {
+			if (cookies.get('_is-prompt-generate')) {
 
 			} else {
 				const guestToken = searchParams.get('user_id'); // for the guest
 				if (guestToken) {
-					cookies.remove('is-prompt-generate');
+					cookies.remove('_is-prompt-generate');
 				} else {
 					router.push("/")
 				}

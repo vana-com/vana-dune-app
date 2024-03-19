@@ -52,6 +52,7 @@ export function Nav(prop: any) {
 		cookies.remove('_scope');
 		cookies.remove('_state');
 		cookies.remove('_token');
+		cookies.remove('_is-prompt-generate');
 
 		fn.localStorage.remove('user_id');
 		fn.localStorage.remove('user_balance');
@@ -215,7 +216,7 @@ export function Nav(prop: any) {
 					}, 15000)
 
 					promptInterval = setInterval(() => {
-						if (cookies.get('is-prompt-generate')) {
+						if (cookies.get('_is-prompt-generate')) {
 							reqGetBalance();
 							clearInterval(promptInterval);
 						}
