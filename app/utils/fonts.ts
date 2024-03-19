@@ -7,6 +7,7 @@ import localFont from "next/font/local";
  */
 
 const monaSans = localFont({
+	preload: true,
 	src: [
 		// default
 		{
@@ -19,6 +20,7 @@ const monaSans = localFont({
 })
 
 const brooklyn = localFont({
+	preload: true,
 	src: [
 		// default
 		{
@@ -31,6 +33,7 @@ const brooklyn = localFont({
 })
 
 const duneRise = localFont({
+	preload: true,
 	src: [
 		// default
 		{
@@ -43,6 +46,7 @@ const duneRise = localFont({
 })
 
 const MonaSanExp_Regular = localFont({
+	preload: true,
 	src: [
 		// default
 		{
@@ -55,6 +59,7 @@ const MonaSanExp_Regular = localFont({
 })
 
 const MonaSanExp_Medium = localFont({
+	preload: true,
 	src: [
 		// default
 		{
@@ -67,6 +72,7 @@ const MonaSanExp_Medium = localFont({
 })
 
 const MonaSanExp_SemiBold = localFont({
+	preload: true,
 	src: [
 		// default
 		{
@@ -79,6 +85,7 @@ const MonaSanExp_SemiBold = localFont({
 })
 
 const MonaSanExp_Bold = localFont({
+	preload: true,
 	src: [
 		// default
 		{
@@ -91,6 +98,7 @@ const MonaSanExp_Bold = localFont({
 })
 
 const MonaSanExp_ExtraBold = localFont({
+	preload: true,
 	src: [
 		// default
 		{
@@ -103,6 +111,7 @@ const MonaSanExp_ExtraBold = localFont({
 })
 
 const AvenyTWeb = localFont({
+	preload: true,
 	src: [
 		// default
 		{
