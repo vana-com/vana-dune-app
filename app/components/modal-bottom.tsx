@@ -37,10 +37,10 @@ export function ModalBottom(prop: any) {
 		setOpen(true);
 	};
 
+	let count: number = 0;
 	const handleCloseModal = () => {
 		setOpen(false);
 		closeModal(false);
-		clearInterval(saveImageInterval)
 	};
 
 	const handleConfirmModal = () => {
@@ -49,6 +49,10 @@ export function ModalBottom(prop: any) {
 	};
 
 	const openSaveImage = () => {
+		fn.localStorage.remove("download-success")
+		count = 0;
+		clearInterval(saveImageInterval)
+
 		if (isMobile || fn.getMobileOperatingSystem() == 'iOS') {
 			if (fn.getMobileOperatingSystem() == 'iOS') {
 				clearInterval(saveImageInterval)
@@ -69,24 +73,27 @@ export function ModalBottom(prop: any) {
 			// }
 		}
 
-		setTimeout(() => {
-			saveImageInterval = setInterval(() => {
-				if (fn.localStorage.get("download-success")) {
-					if (fn.localStorage.get("download-success") == "1") {
-						setIsSuccessDownload(true)
-					} else {
-						setIsSuccessDownload(false)
-					}
-					fn.localStorage.remove("download-success")
-					setShowSuccessSaved(true);
-					clearInterval(saveImageInterval)
-					console.log("download complete")
+
+		saveImageInterval = setInterval(() => {
+			if (fn.localStorage.get("download-success")) {
+				if (fn.localStorage.get("download-success") == "1") {
+					setIsSuccessDownload(true)
 				} else {
-					console.log("download in-progress")
+					setIsSuccessDownload(false)
 				}
-			}, 500)
-			console.log("openSaveImage")
-		}, 1000);
+				fn.localStorage.remove("download-success")
+				setShowSuccessSaved(true);
+				clearInterval(saveImageInterval)
+				// console.log("download complete")
+			} else {
+				count = count + 500;
+				// console.log("download in-progress", count)
+				if (count >= 15000) {
+					// console.log("download timeout")
+					clearInterval(saveImageInterval)
+				}
+			}
+		}, 500)
 	}
 
 	useEffect(() => {
