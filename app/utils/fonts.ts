@@ -15,7 +15,8 @@ const monaSans = localFont({
 		},
 	],
 	variable: '--font-mona-sans',
-	preload: false,
+	display: 'swap',
+	preload: true,
 })
 
 const brooklyn = localFont({
@@ -28,7 +29,8 @@ const brooklyn = localFont({
 		},
 	],
 	variable: '--font-brooklyn',
-	preload: false,
+	display: 'swap',
+	preload: true,
 })
 
 const duneRise = localFont({
@@ -41,7 +43,8 @@ const duneRise = localFont({
 		},
 	],
 	variable: '--font-dune-rise',
-	preload: false,
+	display: 'swap',
+	preload: true,
 })
 
 const MonaSanExp_Regular = localFont({
@@ -54,7 +57,8 @@ const MonaSanExp_Regular = localFont({
 		},
 	],
 	variable: '--font-mona-sans-regular',
-	preload: false,
+	display: 'swap',
+	preload: true,
 })
 
 const MonaSanExp_Medium = localFont({
@@ -67,7 +71,8 @@ const MonaSanExp_Medium = localFont({
 		},
 	],
 	variable: '--font-mona-sans-medium',
-	preload: false,
+	display: 'swap',
+	preload: true,
 })
 
 const MonaSanExp_SemiBold = localFont({
@@ -80,7 +85,8 @@ const MonaSanExp_SemiBold = localFont({
 		},
 	],
 	variable: '--font-mona-sans-semibold',
-	preload: false,
+	display: 'swap',
+	preload: true,
 })
 
 const MonaSanExp_Bold = localFont({
@@ -93,7 +99,8 @@ const MonaSanExp_Bold = localFont({
 		},
 	],
 	variable: '--font-mona-sans-bold',
-	preload: false,
+	display: 'swap',
+	preload: true,
 })
 
 const MonaSanExp_ExtraBold = localFont({
@@ -106,7 +113,8 @@ const MonaSanExp_ExtraBold = localFont({
 		},
 	],
 	variable: '--font-mona-sans-extra-bold',
-	preload: false,
+	display: 'swap',
+	preload: true,
 })
 
 const AvenyTWeb = localFont({
@@ -120,7 +128,8 @@ const AvenyTWeb = localFont({
 		},
 	],
 	variable: '--font-aveny-t-web',
-	preload: false,
+	display: 'swap',
+	preload: true,
 })
 
 export {
