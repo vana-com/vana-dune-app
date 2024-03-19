@@ -5,9 +5,7 @@ import localFont from "next/font/local";
  * Link: https://github.com/github/mona-sans/tree/v1.0.1
  * Link for font weights: https://tailwindcss.com/docs/font-weight
  */
-
 const monaSans = localFont({
-	preload: true,
 	src: [
 		// default
 		{
@@ -16,11 +14,11 @@ const monaSans = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-mona-sans'
+	variable: '--font-mona-sans',
+	preload: false,
 })
 
 const brooklyn = localFont({
-	preload: true,
 	src: [
 		// default
 		{
@@ -29,11 +27,11 @@ const brooklyn = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-brooklyn'
+	variable: '--font-brooklyn',
+	preload: false,
 })
 
 const duneRise = localFont({
-	preload: true,
 	src: [
 		// default
 		{
@@ -42,11 +40,11 @@ const duneRise = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-dune-rise'
+	variable: '--font-dune-rise',
+	preload: false,
 })
 
 const MonaSanExp_Regular = localFont({
-	preload: true,
 	src: [
 		// default
 		{
@@ -55,11 +53,11 @@ const MonaSanExp_Regular = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-mona-sans-regular'
+	variable: '--font-mona-sans-regular',
+	preload: false,
 })
 
 const MonaSanExp_Medium = localFont({
-	preload: true,
 	src: [
 		// default
 		{
@@ -68,11 +66,11 @@ const MonaSanExp_Medium = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-mona-sans-medium'
+	variable: '--font-mona-sans-medium',
+	preload: false,
 })
 
 const MonaSanExp_SemiBold = localFont({
-	preload: true,
 	src: [
 		// default
 		{
@@ -81,11 +79,11 @@ const MonaSanExp_SemiBold = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-mona-sans-semibold'
+	variable: '--font-mona-sans-semibold',
+	preload: false,
 })
 
 const MonaSanExp_Bold = localFont({
-	preload: true,
 	src: [
 		// default
 		{
@@ -94,11 +92,11 @@ const MonaSanExp_Bold = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-mona-sans-bold'
+	variable: '--font-mona-sans-bold',
+	preload: false,
 })
 
 const MonaSanExp_ExtraBold = localFont({
-	preload: true,
 	src: [
 		// default
 		{
@@ -107,11 +105,11 @@ const MonaSanExp_ExtraBold = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-mona-sans-extra-bold'
+	variable: '--font-mona-sans-extra-bold',
+	preload: false,
 })
 
 const AvenyTWeb = localFont({
-	preload: true,
 	src: [
 		// default
 		{
@@ -121,7 +119,8 @@ const AvenyTWeb = localFont({
 			style: 'normal',
 		},
 	],
-	variable: '--font-aveny-t-web'
+	variable: '--font-aveny-t-web',
+	preload: false,
 })
 
 export {
