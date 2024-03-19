@@ -58,7 +58,7 @@ export default function Result() {
 	const onClickContinue = () => {
 		setShowModalTryAgain(false)
 		setTimeout(() => {
-			cookies.remove('is-prompt-generate');
+			cookies.remove('_is-prompt-generate');
 			router.replace("/");
 		}, 100);
 	}
@@ -92,7 +92,7 @@ export default function Result() {
 
 		const getSavedPrompt = async (user_id: any = '') => {
 			if (!user_id) {
-				cookies.remove('is-prompt-generate');
+				cookies.remove('_is-prompt-generate');
 				router.replace("/");
 				return;
 			}
@@ -173,7 +173,7 @@ export default function Result() {
 					className="mb-[10px] min-h-[81px] font-mona-sans-extra-bold text-primary-4 font-extrabold text-center md:pt-[2rem] text-[40px] leading-[40px] 4xs:text-[40px] 4xs:leading-[45px] 2xs:text-[50px] 2xs:leading-[50px] xs:text-[61px] xs:leading-[61px] md:text-[81px] md:leading-[81px]">
 					{
 						resultData ?
-							<p>{resultData.tribe}</p>
+							<p style={{textTransform: "uppercase"}}>{resultData.tribe}</p>
 							: null
 					}
 				</div>

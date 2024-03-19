@@ -62,9 +62,15 @@ export default function LandingPage() {
 	}
 
 	useEffect(() => {
-		cookies.remove('is-clicked-discover');
-		cookies.remove('is-prompt-generate');
-		cookies.remove('is-clicked-discover');
+		setTimeout(() => {
+			if (cookies.get('is-clicked-discover')) {
+				cookies.remove('is-clicked-discover');
+			}
+
+			if (cookies.get('_is-prompt-generate')) {
+				cookies.remove('_is-prompt-generate');
+			}
+		}, 250);
 		fn.localStorage.remove("prompt-error")
 		fn.localStorage.remove("user_balance")
 	}, [cookies])

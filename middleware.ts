@@ -23,7 +23,7 @@ export function middleware(request: NextRequest) {
 		}
 
 		if (codeVerifier && currentUrl.includes("/loading")) {
-			let isPromptGenerate = request.cookies.get('is-prompt-generate');
+			let isPromptGenerate = request.cookies.get('_is-prompt-generate');
 			let isClickDiscover = request.cookies.get('is-clicked-discover');
 			if (isPromptGenerate && isClickDiscover) {
 				return NextResponse.next();

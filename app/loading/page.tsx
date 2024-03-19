@@ -116,7 +116,8 @@ export default function Loading() {
 						<div
 							style={{
 								textShadow: '-2.5px 0px 0px rgba(242, 77, 77, 1)',
-								letterSpacing: '1.95px'
+								letterSpacing: '1.95px',
+								textTransform: "uppercase"
 							}}
 							className={`font-mona-sans-extra-bold font-extrabold text-primary-4 text-[25px] text-center leading-[24px] ${isChanged ? 'opacity-[0.7]' : ''}`}>
 							{slides[itemIndex].name}
