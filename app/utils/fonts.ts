@@ -5,6 +5,8 @@ import localFont from "next/font/local";
  * Link: https://github.com/github/mona-sans/tree/v1.0.1
  * Link for font weights: https://tailwindcss.com/docs/font-weight
  */
+
+// disabled preload because on firefox browser, there will be a warning about fonts
 const monaSans = localFont({
 	src: [
 		// default

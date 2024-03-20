@@ -131,37 +131,6 @@ export default function LandingPage() {
 
 							</div>
 						</div>
-						{/* <div className="bg-wrapper absolute top-0 right-0 bottom-0 left-0 overflow-hidden">
-
-							<Image src={`/resources/bg/right-stars.png`} alt="right-stars" width="150" height="131"
-								className="sprite-right-stars w-[150px] h-[131px]  absolute top-[56px] right-[21px]"
-							/>
-
-							<Image src={`/resources/bg/left-stars.png`} alt="left-stars" width="100" height="131"
-								className="sprite-left-stars w-[100px] h-[131px]  absolute bottom-[511px] left-[18px]"
-							/>
-
-							<Image src={`/resources/bg/moon.svg`} alt="moon" width="92" height="92"
-								className="sprite-moon w-[92px] h-[92px]  absolute bottom-[422px] right-[64px] z-[1]"
-							/>
-
-							<Image src={`/resources/bg/character.svg`} alt="character" width="37" height="37"
-								className="sprite-character w-[37px] h-[37px]  absolute bottom-[286px] right-[95px] z-[1]"
-							/>
-
-							<Image src={`/resources/bg/footprint.png`} alt="footprint" width="46" height="26"
-								className="sprite-footprint w-[46px] h-[26px]  absolute bottom-[256px] right-[121px] z-[1]"
-							/>
-
-							<div className="sprite-layer-4 bg-fog w-full h-[440px] absolute bottom-[280px] bg-cover"></div>
-
-							<div className="sprite-layer-3 bg-layer-3 w-full h-[225px] absolute bottom-[181px] bg-cover"></div>
-
-							<div className="sprite-layer-2 bg-layer-2 w-full h-[129px] absolute bottom-[109px] bg-cover"></div>
-
-							<div className="sprite-layer-1 bg-layer-1 w-full h-[129px] absolute bottom-0 bg-cover"></div>
-
-						</div> */}
 					</div>
 				</div>
 			</div>
