@@ -29,12 +29,12 @@ import { NavigationEvents } from './components/navigation-events'
 import Loading from "./loading/page";
 export const metadata: Metadata = {
 	title: "Sands Of Arrakis",
-	description: "Sands Of Arrakis Template",
+	description: "Embark on the Journey Through the Sand of Fate",
 	keywords: ['Sands Of Arrakis', 'Vana AI', 'Vana The Template'],
 	metadataBase: new URL(`${common.domain}`),
 	openGraph: {
-		title: 'Sands Of Arrakis',
-		description: 'Embark on the Journey Through the Sand of Fate: Discover Your Inner Dune Character',
+		title: 'Sands Of Arrakis: Embark on the Journey Through the Sand of Fate',
+		description: 'Embark on the Journey Through the Sand of Fate: Discover Your Inner Dune Character.',
 		url: common.domain,
 		siteName: '@sandofarrakis',
 		images: [
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
 		type: 'website',
 	},
 	twitter: {
-		title: 'Sands Of Arrakis',
-		description: 'Embark on the Journey Through the Sand of Fate: Discover Your Inner Dune Character',
+		title: 'Sands Of Arrakis: Embark on the Journey Through the Sand of Fate',
+		description: 'Embark on the Journey Through the Sand of Fate: Discover Your Inner Dune Character.',
 		card: 'summary_large_image',
 		images: [
 			{

@@ -1,7 +1,6 @@
 "use client";
 import Image from 'next/image'
-import { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 import Link from 'next/link';
 
 import { common } from "./../utils/common";
@@ -10,7 +9,6 @@ export function HelpSupport(props: any) {
 	const [open, setOpen] = useState<boolean>(false);
 
 	const openHelpSupport = () => {
-		// console.log("openHelpSupport");
 		setOpen(true)
 	}
 

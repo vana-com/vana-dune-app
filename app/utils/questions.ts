@@ -1,3 +1,8 @@
+/**
+ * Questions and anwers are static only
+ * todo: If the client wants to make an API for this question and answer list, 
+ * just create an api route; see directory app/api/
+ */
 const questionsArr: Array<string> = [
 	'How do you prefer to handle conflicts?', // default first question
 	'What do you value most in society?',

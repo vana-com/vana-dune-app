@@ -1,3 +1,8 @@
+/**
+ * loading items are static only
+ * todo: If the client wants to make an API for loading items, 
+ * just create an api route; see directory app/api/
+ */
 
 const slidesArr: Array<any> = [
 	{
