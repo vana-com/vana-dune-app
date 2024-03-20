@@ -331,9 +331,9 @@ export default function ExportImage() {
 								</div>
 
 								<div className="mt-[1.75rem]">
-									<div>
+									{/* <div>
 										<p className="font-mona-sans-bold text-[20px] sm:text-[24px] text-[#262626]">TAP LINK TO SEE MORE</p>
-									</div>
+									</div> */}
 
 									<div className="mt-[1.25rem] flex items-center justify-center">
 										<div className="font-aveny font-normal flex items-center bg-white rounded-[5px] text-[#262626] text-[26px] leading-[26px] sm:text-[35px] sm:leading-[35px] p-[8px]">

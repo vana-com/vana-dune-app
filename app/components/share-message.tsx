@@ -32,11 +32,11 @@ export function ShareMessage() {
 	return (
 		<>
 			<div className={`${isNavColorChange ? 'bg-[#E5C9C3]' : 'bg-[transparent]'}  transition-all duration-500 sticky top-0 z-[50] p-[16px] pt-[10px]`}>
-				<div className=" sm:px-[4rem] md:px-[6rem] lg:px-[8rem] xl:px-[10rem] 2xl:w-[1200px] 2xl:mx-auto">
+				<div className="sm:px-[4rem] md:px-[6rem] lg:px-[8rem] xl:px-[10rem] 2xl:w-[1200px] 2xl:mx-auto">
 					<div className="font-mona-sans-bold font-bold text-[18px] text-primary-6">Which Dune character are you?</div>
 
 					<div className="font-brookly font-normal text-[12px] text-primary-6">
-						<p>Embark on a journey through the sands of Arrakis and discover which iconic character from Dune, resonates with you the most.</p>
+						<p className="md:text-[14px]">Embark on a journey through the sands of Arrakis and discover which iconic character from Dune, resonates with you the most.</p>
 					</div>
 
 					<div className="w-[212px] mx-auto mt-[12px]">
