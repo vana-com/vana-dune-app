@@ -213,7 +213,7 @@ export function Nav(prop: any) {
 					reqGetBalance();
 					interval = setInterval(() => {
 						reqGetBalance();
-					}, 15000)
+					}, 20000)
 
 					if (pathname === '/questions') {
 						promptInterval = setInterval(() => {
@@ -221,7 +221,7 @@ export function Nav(prop: any) {
 								reqGetBalance();
 								clearInterval(promptInterval);
 							}
-						}, 2500)
+						}, 15000)
 					} else {
 						clearInterval(promptInterval);
 					}
