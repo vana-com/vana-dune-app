@@ -5,20 +5,7 @@ import { cookies } from 'next/headers'
 import { data } from ".."
 import { api } from "../api"
 export async function GET() {
-	// // start test
-	// let data: any = {
-	// 	"status": true,
-	// 	"balance": 126,
-	// };
 
-	// // let data: any = {
-	// // 	"error": {
-	// // 		"status": 0,
-	// // 		"statusText": "Error requesting https://backend.beta.sandsofarrakis.me/api/users/balance"
-	// // 	}
-	// // };
-	// return NextResponse.json(data)
-	// // end test
 	const cookieStore = cookies()
 	const url = `${data.api_url}${api.getBalance}`;
 
