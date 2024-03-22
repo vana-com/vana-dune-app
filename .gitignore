@@ -36,5 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 # for dev purposes only and testing
-note.txt
-/mockdata
+#note.txt
+#/mockdata

@@ -1,0 +1,17 @@
+Staging
+
+development
+Vercel: https://vana-dune-app-git-development.vercel.vana.com/
+
+FE: https://beta.sandsofarrakis.me/
+BE: https://backend.beta.sandsofarrakis.me/api
+
+redirection: https://beta.sandsofarrakis.me/questions
+
+production
+Vercel: https://vana-dune-app.vercel.vana.com
+
+FE: https://sandsofarrakis.me/
+BE: https://backend.sandsofarrakis.me/api
+
+redirection: https://sandsofarrakis.me/questions
