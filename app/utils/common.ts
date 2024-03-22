@@ -7,7 +7,7 @@ const common = {
 	// Base URL of the project
 	domain: process.env.NEXT_PUBLIC_BASE_URL ?? process.env.NODE_ENV === "production" ? "https://www.sandsofarrakis.me/" : "https://beta.sandsofarrakis.me/",
 	// Backend API URL
-	api_url: process.env.NEXT_PUBLIC_API_URL ?? process.env.NODE_ENV === "production" ? "https://backend.beta.sandsofarrakis.me/api" : "https://backend.beta.sandsofarrakis.me/api",
+	api_url: process.env.NEXT_PUBLIC_API_URL ?? process.env.NODE_ENV === "production" ? "https://backend.sandsofarrakis.me/api" : "https://backend.beta.sandsofarrakis.me/api",
 	// Vana's Help and support URL
 	helpSupport: process.env.NEXT_PUBLIC_VANA_HELP_URL ?? "https://support.vana.com/hc/en-us/requests/new",
 	// Vana's homepage URL
