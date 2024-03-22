@@ -299,7 +299,7 @@ export default function ExportImage() {
 								<Image
 									className="absolute top-0 left-0 4xs:left-[1.75rem] sm:left-[6rem] md:left-[8rem] lg:left-[10rem]"
 									src={`/resources/quote.svg`} alt="qoute" width="56" height="56" />
-								<p className="block px-[5px] font-mona-sans-bold text-[16px]">
+								<p className="block px-[5px] font-mona-sans-bold text-[16px]" style={{ wordBreak: "break-all" }}>
 									{
 										resultData ?
 											qoute : ''}
