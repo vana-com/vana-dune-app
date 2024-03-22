@@ -5,7 +5,15 @@ import { cookies } from 'next/headers'
 import { data } from ".."
 import { api } from "../api"
 
+/*WARNING: FOR TEST DATA ONLY*/
+import { mockdata } from "@/mockdata"
+/*END TEST*/
+
 export async function POST(req: NextRequest, res: NextResponse) {
+
+	/*WARNING: FOR TEST DATA ONLY*/
+	if (process.env.NODE_ENV === "development") return mockdata.getOathToken();
+	/*END TEST*/
 
 	const cookieStore = cookies()
 	const url = `${data.api_url}${api.getOathToken}`;

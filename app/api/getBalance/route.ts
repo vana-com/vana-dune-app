@@ -4,7 +4,16 @@ import { cookies } from 'next/headers'
 
 import { data } from ".."
 import { api } from "../api"
+
+/*WARNING: FOR TEST DATA ONLY*/
+import { mockdata } from "@/mockdata"
+/*END TEST*/
+
 export async function GET() {
+
+	/*WARNING: FOR TEST DATA ONLY*/
+	if (process.env.NODE_ENV === "development") return mockdata.getBalance();
+	/*END TEST*/
 
 	const cookieStore = cookies()
 	const url = `${data.api_url}${api.getBalance}`;
