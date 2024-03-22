@@ -173,7 +173,7 @@ export default function Result() {
 					className="mb-[10px] min-h-[81px] font-mona-sans-extra-bold text-primary-4 font-extrabold text-center md:pt-[2rem] text-[40px] leading-[40px] 4xs:text-[40px] 4xs:leading-[45px] 2xs:text-[50px] 2xs:leading-[50px] xs:text-[61px] xs:leading-[61px] md:text-[81px] md:leading-[81px]">
 					{
 						resultData ?
-							<p style={{textTransform: "uppercase"}}>{resultData.tribe}</p>
+							<p style={{ textTransform: "uppercase" }}>{resultData.tribe}</p>
 							: null
 					}
 				</div>
@@ -197,7 +197,7 @@ export default function Result() {
 						<div className="min-h-[81px] font-brooklyn font-normal text-[14px] text-primary-6">
 							{
 								resultData ?
-									<p>{topText}</p>
+									<p style={{ wordBreak: "break-all" }}>{topText}</p>
 									: null
 							}
 						</div>
@@ -206,7 +206,7 @@ export default function Result() {
 							<Video></Video>
 							{
 								bottomText ?
-									<p className="pt-[16px] font-brooklyn font-normal text-[14px] text-primary-6">{bottomText}</p>
+									<p className="pt-[16px] font-brooklyn font-normal text-[14px] text-primary-6" style={{ wordBreak: "break-all" }}>{bottomText}</p>
 									:
 									null
 							}
