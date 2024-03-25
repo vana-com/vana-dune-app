@@ -184,9 +184,9 @@ export function Nav(prop: any) {
 
 				if (data && data.error) {
 					// if not landing page dont show
-					if (pathname != '/') {
-						setShowSessionError(true)
-					}
+					// if (pathname != '/') {
+					// 	setShowSessionError(true)
+					// }
 				} else {
 					if (data.status) {
 						setCoins(data.balance ? data.balance : 0);
@@ -351,7 +351,8 @@ export function Nav(prop: any) {
 				</div>
 
 				<div className="modal-body mb-[24px] font-brooklyn font-normal text-[16px] px-[5px]">
-					<p>We could not restore your progress. If you proceed now, your progress will be reset.</p>
+					{/* <p>We could not restore your progress. If you proceed now, your progress will be reset.</p> */}
+					<p>Please note that if you leave the app at this time you will lose your progress and credits used.</p>
 				</div>
 
 				<div className="modal-footer">
