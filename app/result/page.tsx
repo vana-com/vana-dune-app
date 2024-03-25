@@ -134,12 +134,21 @@ export default function Result() {
 	}, [cookies, userID, router])
 
 	useEffect(() => {
+
+		function addSpaceAfterComma(text: any) {
+			// Replace every comma not followed by a space with a comma followed by a space
+			return text.replace(/([,.])([^ ])/g, '$1 $2');
+		}
+
 		if (resultData) {
 			setAvatar(resultData.image);
 
 			setQoute(fn.sanitizeText(resultData.quote))
-			setTopText(fn.truncateText(`${resultData.story}`, 'topText'))
-			setBottomText(fn.truncateText(`${resultData.story}`, 'bottomText'))
+
+			let story = addSpaceAfterComma(resultData.story);
+
+			setTopText(fn.truncateText(`${story}`, 'topText'))
+			setBottomText(fn.truncateText(`${story}`, 'bottomText'))
 		}
 	}, [resultData, avatar])
 	return (
@@ -197,7 +206,7 @@ export default function Result() {
 						<div className="min-h-[81px] font-brooklyn font-normal text-[14px] text-primary-6">
 							{
 								resultData ?
-									<p style={{ wordBreak: "break-all" }}>{topText}</p>
+									<p style={{ wordBreak: "keep-all" }}>{topText}</p>
 									: null
 							}
 						</div>
@@ -206,7 +215,7 @@ export default function Result() {
 							<Video></Video>
 							{
 								bottomText ?
-									<p className="pt-[16px] font-brooklyn font-normal text-[14px] text-primary-6" style={{ wordBreak: "break-all" }}>{bottomText}</p>
+									<p className="pt-[16px] font-brooklyn font-normal text-[14px] text-primary-6" style={{ wordBreak: "keep-all" }}>{bottomText}</p>
 									:
 									null
 							}

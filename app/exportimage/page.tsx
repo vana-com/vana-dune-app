@@ -31,6 +31,7 @@ export default function ExportImage() {
 	const [isLoaded, setIsLoaded] = useState<boolean>(false)
 	const [dataUrl, setDataUrl] = useState<any>(null)
 	const hasWindow = typeof window !== 'undefined';
+	const [story, setStory] = useState<any>("")
 
 
 
@@ -173,6 +174,11 @@ export default function ExportImage() {
 	useEffect(() => {
 		setIsMobile(fn.isMobile())
 
+		function addSpaceAfterComma(text: any) {
+			// Replace every comma not followed by a space with a comma followed by a space
+			return text.replace(/([,.])([^ ])/g, '$1 $2');
+		}
+
 		const getSavedPrompt = async (user_id: any = '') => {
 			try {
 				const res = await fetch(`api/getSavedPrompt/${user_id}`);
@@ -186,6 +192,8 @@ export default function ExportImage() {
 					}
 				} else {
 					if (data.status) {
+						let story = addSpaceAfterComma(data.story);
+						setStory(story)
 						setResultData(data)
 						setAvatar(data.image);
 						setQoute(fn.sanitizeText(data.quote))
@@ -322,7 +330,7 @@ export default function ExportImage() {
 													style={{
 														letterSpacing: "0.75px"
 													}}
-													className="line-clamp-[7] min-[600px]:line-clamp-[12]">{resultData.story}</p>
+													className="line-clamp-[7] min-[600px]:line-clamp-[12]">{story}</p>
 												: null
 										}
 
