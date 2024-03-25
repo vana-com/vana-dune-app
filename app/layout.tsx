@@ -73,6 +73,9 @@ export default function RootLayout({
 
 	return (
 		<html lang="en" className={`${fontVariables} ${tailwindClasses}`}>
+			<head>
+				<meta httpEquiv="X-UA-Compatible" content="IE=edge"></meta>
+			</head>
 			<body>
 				<CookiesProvider>
 					{children}
